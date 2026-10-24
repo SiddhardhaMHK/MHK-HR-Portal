@@ -1,0 +1,6 @@
+{
+  "name": "MHK Tech Enterprise HRMS",
+  "description": "Unified enterprise cloud HRMS portal featuring multi-role authentication, employee workspace, HR operations command, and system governance.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

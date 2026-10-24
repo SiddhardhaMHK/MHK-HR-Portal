@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-error-container":"#93000a","error-container":"#ffdad6","on-tertiary":"#ffffff","inverse-primary":"#bec6e0","primary":"#000000","tertiary":"#000000","secondary-container":"#8a4cfc","secondary":"#712ae2","surface-container":"#e5eeff","on-tertiary-container":"#d95f00","on-primary-fixed":"#131b2e","on-secondary-fixed":"#25005a","primary-container":"#131b2e","inverse-surface":"#213145","on-secondary-fixed-variant":"#5a00c6","secondary-fixed":"#eaddff","outline-variant":"#c6c6cd","surface":"#f8f9ff","outline":"#76777d","surface-container-high":"#dce9ff","on-tertiary-fixed-variant":"#783200","on-primary":"#ffffff","tertiary-container":"#341100","surface-variant":"#d3e4fe","on-surface-variant":"#45464d","primary-fixed":"#dae2fd","surface-container-lowest":"#ffffff","on-primary-fixed-variant":"#3f465c","surface-bright":"#f8f9ff","surface-dim":"#cbdbf5","on-tertiary-fixed":"#341100","tertiary-fixed":"#ffdbca","surface-container-low":"#eff4ff","error":"#ba1a1a","primary-fixed-dim":"#bec6e0","background":"#f8f9ff","tertiary-fixed-dim":"#ffb690","surface-tint":"#565e74","surface-container-highest":"#d3e4fe","on-secondary-container":"#fffbff","on-primary-container":"#7c839b","secondary-fixed-dim":"#d2bbff","inverse-on-surface":"#eaf1ff","on-secondary":"#ffffff","on-background":"#0b1c30","on-surface":"#0b1c30","on-error":"#ffffff"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"gutter":"1.5rem","space-xl":"2.5rem","margin":"2rem","margin-mobile":"1rem","space-xs":"0.25rem","gutter-mobile":"0.75rem","space-md":"1rem","space-lg":"1.5rem","space-sm":"0.5rem"},fontFamily:{"headline-lg-mobile":["Plus Jakarta Sans"],"label-sm":["Plus Jakarta Sans"],"title-md":["Plus Jakarta Sans"],"body-lg":["Inter"],"label-md":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"body-md":["Inter"],"headline-md":["Plus Jakarta Sans"],"body-sm":["Inter"],"label-xs":["Plus Jakarta Sans"],"headline-xl-mobile":["Plus Jakarta Sans"],"headline-xl":["Plus Jakarta Sans"]},fontSize:{"headline-lg-mobile":["1.5rem",{"lineHeight":"2rem","letterSpacing":"-0.015em","fontWeight":"600"}],"label-sm":["0.75rem",{"lineHeight":"1rem","letterSpacing":"0.02em","fontWeight":"600"}],"title-md":["1.125rem",{"lineHeight":"1.5rem","fontWeight":"600"}],"body-lg":["1rem",{"lineHeight":"1.6rem","fontWeight":"400"}],"label-md":["0.875rem",{"lineHeight":"1.25rem","letterSpacing":"0.01em","fontWeight":"600"}],"headline-lg":["1.75rem",{"lineHeight":"2.25rem","letterSpacing":"-0.02em","fontWeight":"600"}],"body-md":["0.875rem",{"lineHeight":"1.45rem","fontWeight":"400"}],"headline-md":["1.25rem",{"lineHeight":"1.75rem","letterSpacing":"-0.015em","fontWeight":"600"}],"body-sm":["0.75rem",{"lineHeight":"1.25rem","fontWeight":"400"}],"label-xs":["0.6875rem",{"lineHeight":"0.875rem","letterSpacing":"0.04em","fontWeight":"700"}],"headline-xl-mobile":["1.75rem",{"lineHeight":"2.25rem","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-xl":["2.25rem",{"lineHeight":"2.75rem","letterSpacing":"-0.025em","fontWeight":"700"}]}}}}</script></head><body class="bg-background font-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 h-16 bg-surface/85 backdrop-blur-xl z-50 flex items-center justify-between px-margin shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-sm"><div class="w-9 h-9 rounded-lg bg-secondary-container flex items-center justify-center text-on-secondary-container shadow-[0_0_16px_-2px_rgba(124,58,237,0.35)]"><span class="material-symbols-outlined text-[22px]">hub</span></div><div class="flex flex-col"><span class="font-title-md text-title-md tracking-tight text-on-surface">MHK<span class="font-label-md text-secondary ml-space-xs">TECH</span></span><span class="font-label-xs text-label-xs uppercase tracking-wider text-on-surface-variant">Enterprise Portal</span></div></div><div class="h-6 w-px bg-outline-variant/40 hidden md:block"></div><div class="hidden md:flex items-center gap-space-sm bg-surface-container-low px-space-md py-space-xs rounded-lg cursor-pointer hover:bg-surface-container hover:text-on-surface transition-colors"><div class="flex flex-col text-left"><span class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider">Workspace</span><span class="font-label-md text-label-md text-on-surface flex items-center gap-1">Admin Console<span class="material-symbols-outlined text-[16px] text-on-surface-variant">expand_more</span></span></div><span class="font-label-xs text-label-xs uppercase px-space-sm py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-bold tracking-wider">Super Admin / Governance</span></div></div><div class="hidden lg:flex items-center bg-surface-container-lowest px-space-md py-space-xs rounded-lg shadow-[0_1px_3px_0_rgba(15,23,42,0.05)] w-80 justify-between text-on-surface-variant"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">search</span><span class="font-body-sm text-body-sm text-outline">Global search across audit, users, policies...</span></div><kbd class="font-label-xs text-label-xs bg-surface-container-high px-1.5 py-0.5 rounded text-on-surface font-semibold">⌘K</kbd></div><div class="flex items-center gap-space-md"><div class="hidden xl:flex items-center gap-space-md px-space-md py-1 bg-surface-container-low rounded-lg"><div class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px] text-secondary">schedule</span><div class="flex flex-col text-left"><span class="font-label-xs text-label-xs text-on-surface-variant uppercase">IST Local Hub</span><span class="font-label-sm text-label-sm text-on-surface font-semibold">10:45 AM</span></div></div><div class="h-5 w-px bg-outline-variant/40"></div><div class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px] text-on-tertiary-container">public</span><div class="flex flex-col text-left"><span class="font-label-xs text-label-xs text-on-surface-variant uppercase">CST Dallas HQ</span><span class="font-label-sm text-label-sm text-on-surface font-semibold">11:15 PM</span></div></div></div><button class="flex items-center gap-1.5 bg-secondary px-space-md py-space-xs rounded-lg text-on-secondary font-label-sm text-label-sm shadow-[0_0_16px_-2px_rgba(124,58,237,0.35)] hover:bg-secondary-container hover:text-on-secondary-container transition-all active:scale-[0.98]"><span class="material-symbols-outlined text-[18px]">auto_awesome</span><span class="hidden sm:inline">Ask MHK AI</span></button><div class="relative flex items-center justify-center p-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface cursor-pointer"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1.5 right-1.5 flex h-4 w-4 items-center justify-center rounded-full bg-error text-on-error font-label-xs text-[9px] font-bold">5</span></div><div class="h-6 w-px bg-outline-variant/40"></div><div class="flex items-center gap-space-sm pl-space-xs"><div class="hidden sm:flex flex-col text-right"><span class="font-label-md text-label-md text-on-surface leading-tight">Rajesh Mehta</span><span class="font-label-xs text-label-xs text-on-surface-variant">Super Admin / Global IT &amp; People Ops</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><aside class="fixed left-0 top-16 bottom-0 w-72 bg-surface-container-low z-40 flex flex-col justify-between overflow-y-auto shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="py-space-md px-space-md flex flex-col gap-space-md"><div class="flex flex-col gap-1"><span class="px-space-sm font-label-xs text-label-xs tracking-wider uppercase text-on-surface-variant font-bold">ADMIN OVERSIGHT</span><nav class="flex flex-col gap-1" data-active-classes="bg-secondary text-on-secondary font-bold shadow-[0_0_16px_-2px_rgba(124,58,237,0.25)]"><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="overview-governance" href="#"><span class="material-symbols-outlined text-[20px]">dashboard</span>Overview &amp; Governance</a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="roles-permissions-matrix" href="#"><span class="material-symbols-outlined text-[20px]">admin_panel_settings</span>Roles &amp; Permissions Matrix</a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="system-audit-log" href="#"><span class="material-symbols-outlined text-[20px]">history_edu</span>System Audit Log</a></nav></div><div class="flex flex-col gap-1"><span class="px-space-sm font-label-xs text-label-xs tracking-wider uppercase text-on-surface-variant font-bold">GOVERNANCE &amp; COMPLIANCE</span><nav class="flex flex-col gap-1" data-active-classes="bg-secondary text-on-secondary font-bold shadow-[0_0_16px_-2px_rgba(124,58,237,0.25)]"><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="handbook-administration" href="#"><span class="material-symbols-outlined text-[20px]">menu_book</span>Handbook Administration</a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="authorized-signers" href="#"><span class="material-symbols-outlined text-[20px]">draw</span>Authorized Signers</a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="client-contract-mgmt" href="#"><span class="material-symbols-outlined text-[20px]">contract</span>Client &amp; Contract Mgmt</a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="legal-whistleblower" href="#"><span class="material-symbols-outlined text-[20px]">gavel</span>Legal &amp; Whistleblower</a></nav></div><div class="flex flex-col gap-1"><span class="px-space-sm font-label-xs text-label-xs tracking-wider uppercase text-on-surface-variant font-bold">SYSTEM &amp; INTEGRATIONS</span><nav class="flex flex-col gap-1" data-active-classes="bg-secondary text-on-secondary font-bold shadow-[0_0_16px_-2px_rgba(124,58,237,0.25)]"><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="api-usage-billing" href="#"><span class="material-symbols-outlined text-[20px]">terminal</span>API Usage &amp; Billing</a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="security-auth-policies" href="#"><span class="material-symbols-outlined text-[20px]">shield_lock</span>Security &amp; Auth Policies</a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="data-backup-retention" href="#"><span class="material-symbols-outlined text-[20px]">cloud_sync</span>Data Backup &amp; Retention</a></nav></div></div><div class="p-space-md"><div class="bg-surface-container-lowest p-space-md rounded-lg shadow-[0_1px_3px_0_rgba(15,23,42,0.05)] flex items-center justify-between"><div class="flex items-center gap-2"><span class="relative flex h-2.5 w-2.5"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span><span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-secondary"></span></span><div class="flex flex-col"><span class="font-label-xs text-label-xs font-bold text-on-surface">99.98% Uptime</span><span class="font-body-sm text-body-sm text-on-surface-variant">Operational</span></div></div><span class="material-symbols-outlined text-[18px] text-secondary">verified</span></div></div></aside><div class="pl-72"><main class="w-full pt-16 px-gutter pb-space-xl bg-background min-h-screen"><div class="flex flex-col w-full gap-space-lg">
+<!-- Breadcrumb & Header Action Banner -->
+<section class="flex flex-col gap-space-sm">
+<!-- Breadcrumb and Context Tags -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-xs tracking-wider uppercase">
+<span>Admin Console</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="text-on-surface font-bold">Overview &amp; Permissions Matrix</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<div class="flex items-center gap-1.5 px-space-sm py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-xs font-semibold">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<span>Texas Central Time (CST): 11:15 PM</span>
+</div>
+<div class="flex items-center gap-1 px-space-sm py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-xs font-bold uppercase tracking-wider">
+<span class="material-symbols-outlined text-[13px]">shield</span>
+          SUPER ADMIN
+        </div>
+</div>
+</div>
+<!-- Main Title & Operational Buttons -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div class="flex flex-col">
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">System Administration &amp; Governance Command</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">Enterprise security policy enforcement, multi-role granular permissions, authorized signers, and governance workflows.</p>
+</div>
+<div class="flex items-center gap-space-sm flex-wrap">
+<button class="flex items-center gap-1.5 px-space-md py-2 rounded-lg bg-surface-container-low text-on-surface font-label-sm text-label-sm hover:bg-surface-container transition-colors shadow-sm" id="btn-export-audit">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">file_download</span>
+<span>Export Security Audit Report</span>
+</button>
+<button class="flex items-center gap-1.5 px-space-md py-2 rounded-lg bg-secondary text-on-secondary font-label-sm text-label-sm shadow-[0_0_16px_-2px_rgba(124,58,237,0.35)] hover:bg-secondary-container hover:text-on-secondary-container transition-all active:scale-[0.98]" id="btn-save-master-permissions">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+<span>Save Permissions Policy</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Top Admin Stat KPI Strip (5 cards) -->
+<section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-space-md">
+<!-- KPI 1: Active Users -->
+<div class="flex flex-col justify-between p-space-md rounded-lg bg-surface-container-lowest shadow-sm">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-xs text-label-xs uppercase tracking-wider text-on-surface-variant font-bold">Active Users</span>
+<span class="font-headline-md text-headline-md text-on-surface mt-1">256 <span class="font-body-sm text-body-sm text-on-surface-variant font-normal">Total</span></span>
+</div>
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[18px]">group</span>
+</div>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between text-on-surface-variant font-label-xs text-label-xs">
+<span class="text-secondary font-bold">+14 this month</span>
+<span>248 Emp · 6 HR · 2 Adm</span>
+</div>
+</div>
+<!-- KPI 2: Active Employees -->
+<div class="flex flex-col justify-between p-space-md rounded-lg bg-surface-container-lowest shadow-sm">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-xs text-label-xs uppercase tracking-wider text-on-surface-variant font-bold">Active Employees</span>
+<span class="font-headline-md text-headline-md text-on-surface mt-1">248</span>
+</div>
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-on-secondary-fixed-variant">
+<span class="material-symbols-outlined text-[18px]">badge</span>
+</div>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between text-on-surface-variant font-label-xs text-label-xs">
+<span>182 Hyd Hub</span>
+<span>48 Dallas HQ</span>
+<span>18 Client</span>
+</div>
+</div>
+<!-- KPI 3: HR Managers & Admins -->
+<div class="flex flex-col justify-between p-space-md rounded-lg bg-surface-container-lowest shadow-sm">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-xs text-label-xs uppercase tracking-wider text-on-surface-variant font-bold">HR &amp; Admins</span>
+<span class="font-headline-md text-headline-md text-on-surface mt-1">8 Privileged</span>
+</div>
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[18px]">security</span>
+</div>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center gap-1 text-on-surface-variant font-label-xs text-label-xs">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="text-on-surface font-semibold">100% MFA Active</span>
+<span class="text-outline">· 0 Violations</span>
+</div>
+</div>
+<!-- KPI 4: Pending Governance Approvals -->
+<div class="flex flex-col justify-between p-space-md rounded-lg bg-surface-container-lowest shadow-sm">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-xs text-label-xs uppercase tracking-wider text-on-surface-variant font-bold">Governance Queue</span>
+<span class="font-headline-md text-headline-md text-on-tertiary-container mt-1">4 Actions</span>
+</div>
+<div class="w-8 h-8 rounded-lg bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed-variant">
+<span class="material-symbols-outlined text-[18px]">pending_actions</span>
+</div>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between text-on-surface-variant font-label-xs text-label-xs">
+<span>1 Handbook v2.4</span>
+<span>1 Signer</span>
+<span>2 Elevation</span>
+</div>
+</div>
+<!-- KPI 5: API & Integration Calls -->
+<div class="flex flex-col justify-between p-space-md rounded-lg bg-surface-container-lowest shadow-sm">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-xs text-label-xs uppercase tracking-wider text-on-surface-variant font-bold">API &amp; Integration Calls</span>
+<span class="font-headline-md text-headline-md text-on-surface mt-1">1.42M <span class="font-body-sm text-body-sm text-on-surface-variant font-normal">reqs</span></span>
+</div>
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[18px]">query_stats</span>
+</div>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between text-on-surface-variant font-label-xs text-label-xs">
+<span class="text-secondary font-bold">99.98% ok</span>
+<span>$184/mo est.</span>
+<span>12ms p95</span>
+</div>
+</div>
+</section>
+<!-- Main Asymmetric Split Grid: 70% Left Matrix & Signers / 30% Right Governance Operations -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- LEFT COLUMN (8 cols out of 12) -->
+<div class="lg:col-span-8 flex flex-col gap-space-lg">
+<!-- Interactive Granular Access Control & Permissions Matrix Card -->
+<section class="rounded-lg bg-surface-container-lowest p-space-lg shadow-sm flex flex-col gap-space-md">
+<!-- Header & Role Selector Tabs -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div>
+<h2 class="font-title-md text-title-md text-on-surface">Granular Access Control &amp; Permissions Matrix</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Configure module visibility, record access, and administrative capabilities by role.</p>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="font-label-xs text-label-xs uppercase px-2 py-1 rounded bg-secondary-fixed text-on-secondary-fixed font-bold tracking-wider">Role Matrix v3.2</span>
+</div>
+</div>
+<!-- Filter & Role View Navigation -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm bg-surface-container-low p-space-xs rounded-lg">
+<div class="flex flex-wrap items-center gap-1" id="role-matrix-tabs">
+<button class="matrix-tab-btn active px-space-md py-1.5 rounded-lg font-label-sm text-label-sm bg-secondary text-on-secondary shadow-sm transition-all" data-role="all">Overview Matrix</button>
+<button class="matrix-tab-btn px-space-md py-1.5 rounded-lg font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all" data-role="employee">Employee Role (Alex K.)</button>
+<button class="matrix-tab-btn px-space-md py-1.5 rounded-lg font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all" data-role="hr">HR Manager (Priya S.)</button>
+<button class="matrix-tab-btn px-space-md py-1.5 rounded-lg font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all" data-role="admin">Super Admin (Rajesh M.)</button>
+</div>
+<div class="flex items-center bg-surface-container-lowest px-space-sm py-1 rounded-lg text-on-surface-variant w-full md:w-64">
+<span class="material-symbols-outlined text-[16px] mr-1 text-outline">filter_list</span>
+<input class="bg-transparent text-body-sm font-body-sm text-on-surface placeholder:text-outline focus:outline-none w-full" id="permission-search-input" placeholder="Filter permissions or modules..." type="text"/>
+</div>
+</div>
+<!-- Permissions Matrix Table -->
+<div class="overflow-x-auto rounded-lg">
+<table class="w-full text-left font-body-sm text-body-sm" id="matrix-table">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-3 px-4 rounded-l-lg">Module / Page Capability</th>
+<th class="py-3 px-3">Employee</th>
+<th class="py-3 px-3">HR Manager</th>
+<th class="py-3 px-3">Super Admin</th>
+<th class="py-3 px-4 rounded-r-lg">Scope &amp; Restrictions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-high/40">
+<!-- CATEGORY 1: Workforce & Directory -->
+<tr class="bg-surface-container-low/60 category-header">
+<td class="py-2.5 px-4 font-label-xs text-label-xs font-bold uppercase tracking-wider text-secondary" colspan="5">
+                  Workforce &amp; Directory
+                </td>
+</tr>
+<tr class="hover:bg-surface-container-low/40 transition-colors perm-row" data-name="View Org Chart &amp; Directory">
+<td class="py-3 px-4 font-label-md text-label-md text-on-surface">View Org Chart &amp; Directory</td>
+<td class="py-3 px-3">
+<label class="inline-flex items-center gap-1.5 cursor-pointer">
+<input checked="" class="accent-secondary w-4 h-4 rounded cursor-pointer perm-check" type="checkbox"/>
+<span class="font-label-xs text-label-xs text-on-surface-variant">View Only</span>
+</label>
+</td>
+<td class="py-3 px-3">
+<label class="inline-flex items-center gap-1.5 cursor-pointer">
+<input checked="" class="accent-secondary w-4 h-4 rounded cursor-pointer perm-check" type="checkbox"/>
+<span class="font-label-xs text-label-xs text-on-surface-variant">Full Edit</span>
+</label>
+</td>
+<td class="py-3 px-3">
+<label class="inline-flex items-center gap-1.5 cursor-pointer">
+<input checked="" class="accent-secondary w-4 h-4 rounded cursor-pointer perm-check" type="checkbox"/>
+<span class="font-label-xs text-label-xs text-secondary font-bold">Full Manage</span>
+</label>
+</td>
+<td class="py-3 px-4 text-on-surface-variant font-body-sm">
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-xs text-label-xs text-on-surface">Global All Hubs</span>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low/40 transition-colors perm-row" data-name="Edit Personal Profile &amp; Documents">
+<td class="py-3 px-4 font-label-md text-label-md text-on-surface">Edit Personal Profile &amp; Documents</td>
+<td class="py-3 px-3">
+<label class="inline-flex items-center gap-1.5 cursor-pointer">
+<input checked="" class="accent-secondary w-4 h-4 rounded cursor-pointer perm-check" type="checkbox"/>
+<span class="font-label-xs text-label-xs text-on-surface-variant">Self Only</span>
+</label>
+</td>
+<td class="py-3 px-3">
+<label class="inline-flex items-center gap-1.5 cursor-pointer">
+<input checked="" class="accent-secondary w-4 h-4 rounded cursor-pointer perm-check" type="checkbox"/>
+<span class="font-label-xs text-label-xs text-on-surface-variant">Assigned Depts</span>
+</label>
+</td>
+<td class="py-3 px-3">
+<label class="inline-flex items-center gap-1.5 cursor-pointer">
+<input checked="" class="accent-secondary w-4 h-4 rounded cursor-pointer perm-check" type="checkbox"/>
+<span class="font-label-xs text-label-xs text-secondary font-bold">All Records</span>
+</label>
+</td>
+<td class="py-3 px-4 text-on-surface-variant font-body-sm">
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-xs text-label-xs text-on-surface">Sensitive Tax/SSN Masked</span>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low/40 transition-colors perm-row" data-name="Execute Emergency Contact Remind">
+<td class="py-3 px-4 font-label-md text-label-md text-on-surface">Execute Emergency Contact Remind</td>
+<td class="py-3 px-3">
+<label class="inline-flex items-center gap-1.5">
+<input class="accent-secondary w-4 h-4 rounded opacity-40 cursor-not-allowed" disabled="" type="checkbox"/>
+<span class="font-label-xs text-label-xs text-outline">No Access</span>
+</label>
+</td>
+<td class="py-3 px-3">
+<label class="inline-flex items-center gap-1.5 cursor-pointer">
+<input checked="" class="accent-secondary w-4 h-4 rounded cursor-pointer perm-check" type="checkbox"/>
+<span class="font-label-xs text-label-xs text-on-surface-variant">Batch Remind</span>
+</label>
+</td>
+<td class="py-3 px-3">
+<label class="inline-flex items-center gap-1.5 cursor-pointer">
+<input checked="" class="accent-secondary w-4 h-4 rounded cursor-pointer perm-check" type="checkbox"/>
+<span class="font-label-xs text-label-xs text-secondary font-bold">System Broadcast</span>
+</label>
+</td>
+<td class="py-3 px-4 text-on-surface-variant font-body-sm">
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-xs text-label-xs text-on-surface">Automated SMS/Email</span>
+</td>
+</tr>
+<!-- CATEGORY 2: Leave & Attendance -->
+<tr class="bg-surface-container-low/60 category-header">
+<td class="py-2.5 px-4 font-label-xs text-label-xs font-bold uppercase tracking-wider text-secondary" colspan="5">
+                  Leave &amp; Attendance
+                </td>
+</tr>
+<tr class="hover:bg-surface-container-low/40 transition-colors perm-row" data-name="Approve / Reject PTO &amp; Leaves">
+<td class="py-3 px-4 font-label-md text-label-md text-on-surface">Approve / Reject PTO &amp; Leaves</td>
+<td class="py-3 px-3">
+<label class="inline-flex items-center gap-1.5">
+<input class="accent-secondary w-4 h-4 rounded opacity-40 cursor-not-allowed" disabled="" type="checkbox"/>
+<span class="font-label-xs text-label-xs text-outline">Apply Only</span>
+</label>
+</td>
+<td class="py-3 px-3">
+<label class="inline-flex items-center gap-1.5 cursor-pointer">
+<input checked="" class="accent-secondary w-4 h-4 rounded cursor-pointer perm-check" type="checkbox"/>
+<span class="font-label-xs text-label-xs text-on-surface-variant">Tier 1 Sign-off</span>
+</label>
+</td>
+<td class="py-3 px-3">
+<label class="inline-flex items-center gap-1.5 cursor-pointer">
+<input checked="" class="accent-secondary w-4 h-4 rounded cursor-pointer perm-check" type="checkbox"/>
+<span class="font-label-xs text-label-xs text-secondary font-bold">Override &amp; Final Audit</span>
+</label>
+</td>
+<td class="py-3 px-4 text-on-surface-variant font-body-sm">
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-xs text-label-xs text-on-surface">Departmental SLA 24h</span>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low/40 transition-colors perm-row" data-name="Manual Punch Correction">
+<td class="py-3 px-4 font-label-md text-label-md text-on-surface">Manual Punch Correction</td>
+<td class="py-3 px-3">
+<label class="inline-flex items-center gap-1.5">
+<input class="accent-secondary w-4 h-4 rounded opacity-40 cursor-not-allowed" disabled="" type="checkbox"/>
+<span class="font-label-xs text-label-xs text-outline">Request Mode</span>
+</label>
+</td>
+<td class="py-3 px-3">
+<label class="inline-flex items-center gap-1.5 cursor-pointer">
+<input checked="" class="accent-secondary w-4 h-4 rounded cursor-pointer perm-check" type="checkbox"/>
+<span class="font-label-xs text-label-xs text-on-surface-variant">Direct Override</span>
+</label>
+</td>
+<td class="py-3 px-3">
+<label class="inline-flex items-center gap-1.5 cursor-pointer">
+<input checked="" class="accent-secondary w-4 h-4 rounded cursor-pointer perm-check" type="checkbox"/>
+<span class="font-label-xs text-label-xs text-secondary font-bold">Audit Logged</span>
+</label>
+</td>
+<td class="py-3 px-4 text-on-surface-variant font-body-sm">
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-xs text-label-xs text-on-surface">Requires HR reason note</span>
+</td>
+</tr>
+<!-- CATEGORY 3: Compensation, Payroll & Expenses -->
+<tr class="bg-surface-container-low/60 category-header">
+<td class="py-2.5 px-4 font-label-xs text-label-xs font-bold uppercase tracking-wider text-secondary" colspan="5">
+                  Compensation, Payroll &amp; Expenses
+                </td>
+</tr>
+<tr class="hover:bg-surface-container-low/40 transition-colors perm-row" data-name="Approve Expense Claims &amp; Receipts">
+<td class="py-3 px-4 font-label-md text-label-md text-on-surface">Approve Expense Claims &amp; Receipts</td>
+<td class="py-3 px-3">
+<label class="inline-flex items-center gap-1.5">
+<input class="accent-secondary w-4 h-4 rounded opacity-40 cursor-not-allowed" disabled="" type="checkbox"/>
+<span class="font-label-xs text-label-xs text-outline">Submit Only</span>
+</label>
+</td>
+<td class="py-3 px-3">
+<label class="inline-flex items-center gap-1.5 cursor-pointer">
+<input checked="" class="accent-secondary w-4 h-4 rounded cursor-pointer perm-check" type="checkbox"/>
+<span class="font-label-xs text-label-xs text-on-surface-variant">Up to $2,500</span>
+</label>
+</td>
+<td class="py-3 px-3">
+<label class="inline-flex items-center gap-1.5 cursor-pointer">
+<input checked="" class="accent-secondary w-4 h-4 rounded cursor-pointer perm-check" type="checkbox"/>
+<span class="font-label-xs text-label-xs text-secondary font-bold">Unlimited / Override</span>
+</label>
+</td>
+<td class="py-3 px-4 text-on-surface-variant font-body-sm">
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-xs text-label-xs text-on-surface">Receipt OCR verified</span>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low/40 transition-colors perm-row" data-name="Finalize Monthly Payroll Run">
+<td class="py-3 px-4 font-label-md text-label-md text-on-surface">Finalize Monthly Payroll Run</td>
+<td class="py-3 px-3">
+<label class="inline-flex items-center gap-1.5">
+<input class="accent-secondary w-4 h-4 rounded opacity-40 cursor-not-allowed" disabled="" type="checkbox"/>
+<span class="font-label-xs text-label-xs text-outline">No Access</span>
+</label>
+</td>
+<td class="py-3 px-3">
+<label class="inline-flex items-center gap-1.5 cursor-pointer">
+<input checked="" class="accent-secondary w-4 h-4 rounded cursor-pointer perm-check" type="checkbox"/>
+<span class="font-label-xs text-label-xs text-on-surface-variant">Review &amp; Draft</span>
+</label>
+</td>
+<td class="py-3 px-3">
+<label class="inline-flex items-center gap-1.5 cursor-pointer">
+<input checked="" class="accent-secondary w-4 h-4 rounded cursor-pointer perm-check" type="checkbox"/>
+<span class="font-label-xs text-label-xs text-secondary font-bold">Final Disburse &amp; Sign</span>
+</label>
+</td>
+<td class="py-3 px-4 text-on-surface-variant font-body-sm">
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-xs text-label-xs text-on-surface">Dual-key auth required</span>
+</td>
+</tr>
+<!-- CATEGORY 4: Governance, Legal & Compliance -->
+<tr class="bg-surface-container-low/60 category-header">
+<td class="py-2.5 px-4 font-label-xs text-label-xs font-bold uppercase tracking-wider text-secondary" colspan="5">
+                  Governance, Legal &amp; Compliance
+                </td>
+</tr>
+<tr class="hover:bg-surface-container-low/40 transition-colors perm-row" data-name="Whistleblower Case Investigation">
+<td class="py-3 px-4 font-label-md text-label-md text-on-surface">Whistleblower Case Investigation</td>
+<td class="py-3 px-3">
+<label class="inline-flex items-center gap-1.5">
+<input class="accent-secondary w-4 h-4 rounded opacity-40 cursor-not-allowed" disabled="" type="checkbox"/>
+<span class="font-label-xs text-label-xs text-outline">Submit Anon</span>
+</label>
+</td>
+<td class="py-3 px-3">
+<label class="inline-flex items-center gap-1.5">
+<input class="accent-secondary w-4 h-4 rounded opacity-40 cursor-not-allowed" disabled="" type="checkbox"/>
+<span class="font-label-xs text-label-xs text-outline">Blinded</span>
+</label>
+</td>
+<td class="py-3 px-3">
+<label class="inline-flex items-center gap-1.5 cursor-pointer">
+<input checked="" class="accent-secondary w-4 h-4 rounded cursor-pointer perm-check" type="checkbox"/>
+<span class="font-label-xs text-label-xs text-secondary font-bold">Encrypted View</span>
+</label>
+</td>
+<td class="py-3 px-4 text-on-surface-variant font-body-sm">
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-xs text-label-xs text-on-surface">Tracking Token Restricted</span>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low/40 transition-colors perm-row" data-name="Handbook Administration &amp; Publishing">
+<td class="py-3 px-4 font-label-md text-label-md text-on-surface">Handbook Administration &amp; Publishing</td>
+<td class="py-3 px-3">
+<label class="inline-flex items-center gap-1.5">
+<input class="accent-secondary w-4 h-4 rounded opacity-40 cursor-not-allowed" disabled="" type="checkbox"/>
+<span class="font-label-xs text-label-xs text-outline">Read &amp; Ack</span>
+</label>
+</td>
+<td class="py-3 px-3">
+<label class="inline-flex items-center gap-1.5 cursor-pointer">
+<input checked="" class="accent-secondary w-4 h-4 rounded cursor-pointer perm-check" type="checkbox"/>
+<span class="font-label-xs text-label-xs text-on-surface-variant">Draft Sections</span>
+</label>
+</td>
+<td class="py-3 px-3">
+<label class="inline-flex items-center gap-1.5 cursor-pointer">
+<input checked="" class="accent-secondary w-4 h-4 rounded cursor-pointer perm-check" type="checkbox"/>
+<span class="font-label-xs text-label-xs text-secondary font-bold">Publish &amp; Trigger Sign</span>
+</label>
+</td>
+<td class="py-3 px-4 text-on-surface-variant font-body-sm">
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-xs text-label-xs text-on-surface">Mandatory Pop-up</span>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low/40 transition-colors perm-row" data-name="Authorized Signer Management">
+<td class="py-3 px-4 font-label-md text-label-md text-on-surface">Authorized Signer Management</td>
+<td class="py-3 px-3">
+<label class="inline-flex items-center gap-1.5">
+<input class="accent-secondary w-4 h-4 rounded opacity-40 cursor-not-allowed" disabled="" type="checkbox"/>
+<span class="font-label-xs text-label-xs text-outline">No Access</span>
+</label>
+</td>
+<td class="py-3 px-3">
+<label class="inline-flex items-center gap-1.5">
+<input class="accent-secondary w-4 h-4 rounded opacity-40 cursor-not-allowed" disabled="" type="checkbox"/>
+<span class="font-label-xs text-label-xs text-outline">View Signatures</span>
+</label>
+</td>
+<td class="py-3 px-3">
+<label class="inline-flex items-center gap-1.5 cursor-pointer">
+<input checked="" class="accent-secondary w-4 h-4 rounded cursor-pointer perm-check" type="checkbox"/>
+<span class="font-label-xs text-label-xs text-secondary font-bold">Add / Revoke Key</span>
+</label>
+</td>
+<td class="py-3 px-4 text-on-surface-variant font-body-sm">
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-xs text-label-xs text-on-surface">DocuSign &amp; IRS 8821</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Footer / Save Actions -->
+<div class="flex items-center justify-between pt-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-secondary">info</span>
+<span id="pending-changes-label">Changes pending: 0</span>
+</div>
+<button class="px-space-md py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-semibold transition-colors" id="btn-save-matrix">
+            Save Permission Policy
+          </button>
+</div>
+</section>
+<!-- Authorized Corporate Signers & Keyholders Module -->
+<section class="rounded-lg bg-surface-container-lowest p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[20px]">draw</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<h2 class="font-title-md text-title-md text-on-surface">Authorized Corporate Signers &amp; Keyholders</h2>
+<span class="px-2 py-0.5 rounded-full bg-surface-container font-label-xs text-label-xs text-on-surface font-semibold">Active: 3 of 4 Slots</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Officers credentialed to bind MHK Tech Inc. for I-9 reverifications, MSAs, and payroll disbursements.</p>
+</div>
+</div>
+<button class="flex items-center gap-1.5 px-space-md py-1.5 rounded-lg bg-secondary text-on-secondary font-label-sm text-label-sm hover:bg-secondary-container hover:text-on-secondary-container transition-colors shadow-sm self-start sm:self-auto" id="btn-add-signer">
+<span class="material-symbols-outlined text-[16px]">add</span>
+<span>Add Signer</span>
+</button>
+</div>
+<!-- Signers Table -->
+<div class="overflow-x-auto rounded-lg">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-3 px-4 rounded-l-lg">Corporate Signer</th>
+<th class="py-3 px-4">Title &amp; Official Email</th>
+<th class="py-3 px-4">Authorization Scope</th>
+<th class="py-3 px-3">Status</th>
+<th class="py-3 px-3">Issued Date</th>
+<th class="py-3 px-4 text-right rounded-r-lg">Action</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-high/40">
+<!-- Signer 1: Rajesh Mehta -->
+<tr class="hover:bg-surface-container-low/40 transition-colors">
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center font-bold text-label-xs">RM</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Rajesh Mehta</span>
+<span class="font-label-xs text-label-xs text-secondary font-semibold">Primary Keyholder</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col">
+<span class="text-on-surface">VP of Technology &amp; Operations</span>
+<span class="font-label-xs text-label-xs text-on-surface-variant">r.mehta@mhktech.com</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="font-body-sm text-body-sm text-on-surface">Contracts, I-9 Reverification, Master Vendor MSAs</span>
+</td>
+<td class="py-3.5 px-3">
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-surface-container text-secondary font-label-xs text-label-xs font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                    Active (Primary)
+                  </span>
+</td>
+<td class="py-3.5 px-3 text-on-surface-variant font-body-sm">Jan 15, 2024</td>
+<td class="py-3.5 px-4 text-right">
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" title="Manage Certificate">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+</button>
+</td>
+</tr>
+<!-- Signer 2: Priya Sharma -->
+<tr class="hover:bg-surface-container-low/40 transition-colors">
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-surface-container text-on-surface flex items-center justify-center font-bold text-label-xs">PS</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Priya Sharma</span>
+<span class="font-label-xs text-label-xs text-on-surface-variant">Signer Slot 2</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col">
+<span class="text-on-surface">Head of People Operations</span>
+<span class="font-label-xs text-label-xs text-on-surface-variant">p.sharma@mhktech.com</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="font-body-sm text-body-sm text-on-surface">Employment Offers, Leave Letters, Health Benefit Enrollment</span>
+</td>
+<td class="py-3.5 px-3">
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-surface-container text-secondary font-label-xs text-label-xs font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                    Active
+                  </span>
+</td>
+<td class="py-3.5 px-3 text-on-surface-variant font-body-sm">Mar 10, 2024</td>
+<td class="py-3.5 px-4 text-right">
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" title="Manage Certificate">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+</button>
+</td>
+</tr>
+<!-- Signer 3: David Vance -->
+<tr class="hover:bg-surface-container-low/40 transition-colors">
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-surface-container text-on-surface flex items-center justify-center font-bold text-label-xs">DV</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">David Vance</span>
+<span class="font-label-xs text-label-xs text-on-surface-variant">Legal Officer</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col">
+<span class="text-on-surface">Chief Legal Officer (Dallas HQ)</span>
+<span class="font-label-xs text-label-xs text-on-surface-variant">d.vance@mhktech.com</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="font-body-sm text-body-sm text-on-surface">Immigration H-1B LCA, NDAs, Whistleblower Arbitration</span>
+</td>
+<td class="py-3.5 px-3">
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-surface-container text-secondary font-label-xs text-label-xs font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                    Active
+                  </span>
+</td>
+<td class="py-3.5 px-3 text-on-surface-variant font-body-sm">Jul 01, 2024</td>
+<td class="py-3.5 px-4 text-right">
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" title="Manage Certificate">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+</button>
+</td>
+</tr>
+<!-- Signer 4: Elena Ramos -->
+<tr class="hover:bg-surface-container-low/40 transition-colors bg-tertiary-fixed/10">
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-tertiary-fixed text-on-tertiary-fixed-variant flex items-center justify-center font-bold text-label-xs">ER</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Elena Ramos</span>
+<span class="font-label-xs text-label-xs text-on-tertiary-container font-semibold">Audit Renewal Due</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col">
+<span class="text-on-surface">Interim Finance Director</span>
+<span class="font-label-xs text-label-xs text-on-surface-variant">e.ramos@mhktech.com</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="font-body-sm text-body-sm text-on-surface">Banking ACH &amp; Payroll Release</span>
+</td>
+<td class="py-3.5 px-3">
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-xs text-label-xs font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-on-tertiary-container"></span>
+                    Pending Re-verification
+                  </span>
+</td>
+<td class="py-3.5 px-3 text-on-surface-variant font-body-sm">Oct 02, 2026</td>
+<td class="py-3.5 px-4 text-right">
+<button class="px-2 py-1 rounded bg-secondary-fixed text-on-secondary-fixed font-label-xs text-label-xs font-bold hover:bg-secondary hover:text-on-secondary transition-colors">
+                    Re-verify
+                  </button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</div>
+<!-- RIGHT COLUMN (4 cols out of 12) -->
+<div class="lg:col-span-4 flex flex-col gap-space-lg">
+<!-- Active User Composition Card -->
+<section class="rounded-lg bg-surface-container-lowest p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] text-secondary">pie_chart</span>
+<h2 class="font-title-md text-title-md text-on-surface">User Account Composition</h2>
+</div>
+<span class="font-label-xs text-label-xs font-bold px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">256 ACCOUNTS</span>
+</div>
+<!-- Donut Visual & Stats representation using inline SVG -->
+<div class="flex items-center justify-center p-space-sm bg-surface-container-low rounded-lg">
+<div class="relative w-36 h-36 flex items-center justify-center">
+<svg class="w-full h-full transform -rotate-90" viewbox="0 0 100 100">
+<!-- Background Circle -->
+<circle class="text-surface-container" cx="50" cy="50" fill="transparent" r="38" stroke="currentColor" stroke-width="12"></circle>
+<!-- Employees Slice (96.9%) -->
+<circle class="text-secondary" cx="50" cy="50" fill="transparent" r="38" stroke="currentColor" stroke-dasharray="238.76" stroke-dashoffset="7.4" stroke-width="12"></circle>
+<!-- HR Managers Slice (2.3%) -->
+<circle class="text-on-tertiary-container" cx="50" cy="50" fill="transparent" r="38" stroke="currentColor" stroke-dasharray="238.76" stroke-dashoffset="233.2" stroke-width="12"></circle>
+<!-- Admins Slice (0.8%) -->
+<circle class="text-secondary-container" cx="50" cy="50" fill="transparent" r="38" stroke="currentColor" stroke-dasharray="238.76" stroke-dashoffset="236.8" stroke-width="12"></circle>
+</svg>
+<div class="absolute flex flex-col items-center justify-center text-center">
+<span class="font-headline-md text-headline-md font-bold text-on-surface leading-none">256</span>
+<span class="font-label-xs text-label-xs text-on-surface-variant uppercase mt-0.5">Enrolled</span>
+</div>
+</div>
+</div>
+<!-- Breakdown List -->
+<div class="flex flex-col gap-2 font-body-sm text-body-sm">
+<div class="flex items-center justify-between p-2 rounded bg-surface-container-low/60">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+<span class="text-on-surface font-medium">Software &amp; Tech Staff</span>
+</div>
+<span class="font-bold text-on-surface">248 <span class="text-on-surface-variant font-normal text-body-sm">(96.9%)</span></span>
+</div>
+<div class="flex items-center justify-between p-2 rounded bg-surface-container-low/60">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-on-tertiary-container"></span>
+<span class="text-on-surface font-medium">HR Operations Specialists</span>
+</div>
+<span class="font-bold text-on-surface">6 <span class="text-on-surface-variant font-normal text-body-sm">(2.3%)</span></span>
+</div>
+<div class="flex items-center justify-between p-2 rounded bg-surface-container-low/60">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary-container"></span>
+<span class="text-on-surface font-medium">Super Admins / Governance</span>
+</div>
+<span class="font-bold text-on-surface">2 <span class="text-on-surface-variant font-normal text-body-sm">(0.8%)</span></span>
+</div>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container flex items-center justify-between text-on-surface font-label-xs text-label-xs">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-secondary">verified_user</span>
+<span>Zero-Trust Okta MFA Policy Enforced</span>
+</div>
+<span class="text-secondary font-bold">100% Locked</span>
+</div>
+</section>
+<!-- Handbook Administration & Publishing Hub -->
+<section class="rounded-lg bg-surface-container-lowest p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] text-secondary">menu_book</span>
+<h2 class="font-title-md text-title-md text-on-surface">Handbook Administration</h2>
+</div>
+<span class="px-2 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-xs text-label-xs font-bold uppercase">v2.4 Draft Staged</span>
+</div>
+<!-- Version Switch Tabs -->
+<div class="flex items-center bg-surface-container-low p-1 rounded-lg font-label-sm text-label-sm">
+<button class="flex-1 py-1 rounded-lg bg-surface-container-lowest text-on-surface font-bold shadow-sm">Draft (v2.4)</button>
+<button class="flex-1 py-1 rounded-lg text-on-surface-variant hover:text-on-surface">Published (v2.3 - Nov 2025)</button>
+</div>
+<!-- PDF Drag-and-drop Dropzone simulator -->
+<div class="p-space-md rounded-lg bg-surface-container-low flex flex-col items-center justify-center text-center cursor-pointer hover:bg-surface-container transition-colors group">
+<span class="material-symbols-outlined text-[32px] text-secondary group-hover:scale-110 transition-transform">cloud_upload</span>
+<span class="font-label-md text-label-md text-on-surface mt-1">Replace US Draft Handbook</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">PDF document up to 50MB</span>
+<div class="w-full mt-3 p-2 rounded bg-surface-container-lowest flex items-center justify-between text-left">
+<div class="flex items-center gap-2 overflow-hidden">
+<span class="material-symbols-outlined text-[18px] text-secondary shrink-0">picture_as_pdf</span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-xs text-label-xs text-on-surface truncate">MHK_Handbook_2026_v2.4_Clean.pdf</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[11px]">14.2 MB · 100% Parsed</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-[16px] text-secondary shrink-0">check_circle</span>
+</div>
+</div>
+<!-- Draft Sections Checklist -->
+<div class="flex flex-col gap-2">
+<span class="font-label-xs text-label-xs uppercase tracking-wider text-on-surface-variant font-bold">Key Revisions in Queue</span>
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container-low/80 hover:bg-surface-container transition-colors">
+<div class="flex flex-col min-w-0 pr-2">
+<span class="font-label-sm text-label-sm text-on-surface truncate">3.2: Hybrid Work &amp; Dual-Hub Overlap Protocol</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[11px]">2,840 chars · Hyd-Dallas alignment</span>
+</div>
+<div class="flex items-center gap-1 shrink-0">
+<button class="p-1 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high"><span class="material-symbols-outlined text-[15px]">edit</span></button>
+<button class="p-1 rounded text-on-surface-variant hover:text-error hover:bg-surface-container-high"><span class="material-symbols-outlined text-[15px]">delete</span></button>
+</div>
+</div>
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container-low/80 hover:bg-surface-container transition-colors">
+<div class="flex flex-col min-w-0 pr-2">
+<span class="font-label-sm text-label-sm text-on-surface truncate">6.4: H-1B Prevailing Wage &amp; Travel Reimbursement</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[11px]">4,120 chars · DOL compliance</span>
+</div>
+<div class="flex items-center gap-1 shrink-0">
+<button class="p-1 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high"><span class="material-symbols-outlined text-[15px]">edit</span></button>
+<button class="p-1 rounded text-on-surface-variant hover:text-error hover:bg-surface-container-high"><span class="material-symbols-outlined text-[15px]">delete</span></button>
+</div>
+</div>
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container-low/80 hover:bg-surface-container transition-colors">
+<div class="flex flex-col min-w-0 pr-2">
+<span class="font-label-sm text-label-sm text-on-surface truncate">8.1: Whistleblower Anonymous Reporting Procedure</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[11px]">1,950 chars · Zero-retaliation token</span>
+</div>
+<div class="flex items-center gap-1 shrink-0">
+<button class="p-1 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high"><span class="material-symbols-outlined text-[15px]">edit</span></button>
+<button class="p-1 rounded text-on-surface-variant hover:text-error hover:bg-surface-container-high"><span class="material-symbols-outlined text-[15px]">delete</span></button>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-2 pt-1">
+<button class="flex items-center justify-center gap-1.5 py-1.5 rounded-lg bg-surface-container text-on-surface font-label-sm text-label-sm hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-[16px]">add</span>
+<span>+ Add Section</span>
+</button>
+<button class="flex items-center justify-center gap-2 py-2.5 rounded-lg bg-secondary text-on-secondary font-label-sm text-label-sm shadow-[0_0_16px_-2px_rgba(124,58,237,0.35)] hover:bg-secondary-container hover:text-on-secondary-container transition-all active:scale-[0.98]" id="btn-publish-handbook">
+<span class="material-symbols-outlined text-[18px]">publish</span>
+<span>Publish Version 2.4 &amp; Trigger Mandatory Employee Re-acknowledgement</span>
+</button>
+</div>
+</section>
+<!-- Live Admin Announcement Composer & Broadcast -->
+<section class="rounded-lg bg-surface-container-lowest p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] text-secondary">campaign</span>
+<h2 class="font-title-md text-title-md text-on-surface">Admin Broadcast Composer</h2>
+</div>
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+</div>
+<div class="flex flex-col gap-3 font-body-sm text-body-sm">
+<div class="flex flex-col gap-1">
+<label class="font-label-xs text-label-xs uppercase text-on-surface-variant font-bold">Announcement Title</label>
+<input class="p-2 rounded-lg bg-surface-container-low text-on-surface placeholder:text-outline focus:outline-none focus:bg-surface-container-high transition-colors text-body-sm" id="broadcast-title-input" placeholder="e.g. Scheduled System Maintenance / New Policy Rollout" type="text"/>
+</div>
+<div class="grid grid-cols-2 gap-2">
+<div class="flex flex-col gap-1">
+<label class="font-label-xs text-label-xs uppercase text-on-surface-variant font-bold">Target Audience</label>
+<select class="p-2 rounded-lg bg-surface-container-low text-on-surface text-body-sm focus:outline-none">
+<option>All Workspaces (Employee + HR)</option>
+<option>Employees Only</option>
+<option>HR Business Partners Only</option>
+<option>Dallas HQ Personnel</option>
+<option>Hyderabad Hub Personnel</option>
+</select>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-xs text-label-xs uppercase text-on-surface-variant font-bold">Category</label>
+<select class="p-2 rounded-lg bg-surface-container-low text-on-surface text-body-sm focus:outline-none">
+<option>System Alert</option>
+<option>Policy &amp; Legal Update</option>
+<option>Payroll Announcement</option>
+<option>Holiday &amp; Observance</option>
+</select>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-xs text-label-xs uppercase text-on-surface-variant font-bold">Message Content</label>
+<textarea class="p-2 rounded-lg bg-surface-container-low text-on-surface placeholder:text-outline focus:outline-none focus:bg-surface-container-high transition-colors text-body-sm resize-none" id="broadcast-msg-input" placeholder="Enter concise broadcast message to appear as a pinned alert banner..." rows="3"></textarea>
+</div>
+<div class="flex items-center justify-between">
+<label class="inline-flex items-center gap-2 cursor-pointer">
+<input checked="" class="accent-secondary w-4 h-4 rounded" type="checkbox"/>
+<span class="font-label-xs text-label-xs text-on-surface-variant">Pin to top for 72 hrs</span>
+</label>
+<span class="font-label-xs text-label-xs text-on-surface-variant">Broadcast SLA: Immediate</span>
+</div>
+<button class="flex items-center justify-center gap-2 py-2 rounded-lg bg-secondary text-on-secondary font-label-sm text-label-sm hover:bg-secondary-container hover:text-on-secondary-container transition-colors shadow-sm" id="btn-broadcast-submit">
+<span class="material-symbols-outlined text-[18px]">send</span>
+<span>Broadcast to All Workspaces</span>
+</button>
+</div>
+</section>
+<!-- Recent System Audit Feed -->
+<section class="rounded-lg bg-surface-container-lowest p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] text-secondary">history_edu</span>
+<h2 class="font-title-md text-title-md text-on-surface">Recent System Audit Feed</h2>
+</div>
+<a class="font-label-xs text-label-xs text-secondary font-bold hover:underline" href="#">View All</a>
+</div>
+<div class="flex flex-col gap-3 font-body-sm text-body-sm">
+<div class="flex items-start gap-space-sm p-2 rounded-lg bg-surface-container-low/60">
+<span class="material-symbols-outlined text-[18px] text-secondary mt-0.5 shrink-0">edit_note</span>
+<div class="flex flex-col min-w-0">
+<span class="text-on-surface font-medium leading-snug">Rajesh Mehta updated role permissions for HR Manager (Expense limit adjusted)</span>
+<span class="font-label-xs text-label-xs text-on-surface-variant mt-1">12m ago · IP 104.28.19.4 (Dallas HQ)</span>
+</div>
+</div>
+<div class="flex items-start gap-space-sm p-2 rounded-lg bg-surface-container-low/60">
+<span class="material-symbols-outlined text-[18px] text-on-tertiary-container mt-0.5 shrink-0">badge</span>
+<div class="flex flex-col min-w-0">
+<span class="text-on-surface font-medium leading-snug">Priya Sharma executed Form I-9 verification for Dallas hire</span>
+<span class="font-label-xs text-label-xs text-on-surface-variant mt-1">1h ago · IP 49.205.112.9 (Hyd Hub)</span>
+</div>
+</div>
+<div class="flex items-start gap-space-sm p-2 rounded-lg bg-surface-container-low/60">
+<span class="material-symbols-outlined text-[18px] text-secondary mt-0.5 shrink-0">shield</span>
+<div class="flex flex-col min-w-0">
+<span class="text-on-surface font-medium leading-snug">Automated Security Scanner: 0 critical vulnerabilities found across SSO endpoints</span>
+<span class="font-label-xs text-label-xs text-on-surface-variant mt-1">4h ago · AWS US-East GuardDuty</span>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+</div>
+<!-- Client-side Interactive Behaviors -->
+<script>
+  (function () {
+    // 1. Matrix Checkbox Change Tracking
+    let pendingChanges = 0;
+    const pendingLabel = document.getElementById('pending-changes-label');
+    const checkboxes = document.querySelectorAll('.perm-check');
+
+    checkboxes.forEach(cb => {
+      cb.addEventListener('change', () => {
+        pendingChanges += cb.checked ? 1 : -1;
+        if (pendingChanges < 0) pendingChanges = 0;
+        if (pendingLabel) {
+          pendingLabel.textContent = `Changes pending: ${pendingChanges}`;
+          if (pendingChanges > 0) {
+            pendingLabel.classList.add('text-secondary', 'font-bold');
+          } else {
+            pendingLabel.classList.remove('text-secondary', 'font-bold');
+          }
+        }
+      });
+    });
+
+    // 2. Matrix Tab Switching & Filtering
+    const tabButtons = document.querySelectorAll('.matrix-tab-btn');
+    tabButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        tabButtons.forEach(b => {
+          b.classList.remove('active', 'bg-secondary', 'text-on-secondary');
+          b.classList.add('text-on-surface-variant');
+        });
+        btn.classList.add('active', 'bg-secondary', 'text-on-secondary');
+        btn.classList.remove('text-on-surface-variant');
+      });
+    });
+
+    // 3. Permission Filter Search
+    const searchInput = document.getElementById('permission-search-input');
+    if (searchInput) {
+      searchInput.addEventListener('input', (e) => {
+        const query = e.target.value.toLowerCase();
+        const rows = document.querySelectorAll('#matrix-table tbody tr.perm-row');
+        rows.forEach(row => {
+          const name = row.getAttribute('data-name')?.toLowerCase() || '';
+          if (name.includes(query)) {
+            row.style.display = '';
+          } else {
+            row.style.display = 'none';
+          }
+        });
+      });
+    }
+
+    // 4. Toast Notifications Trigger
+    function triggerNotice(msg) {
+      const notice = document.createElement('div');
+      notice.className = 'fixed bottom-6 right-6 z-50 flex items-center gap-2 px-space-md py-3 rounded-lg bg-surface-container-highest text-on-surface shadow-xl text-body-sm font-label-md transition-all duration-300 transform translate-y-4 opacity-0';
+      notice.innerHTML = `<span class="material-symbols-outlined text-[20px] text-secondary">check_circle</span><span>${msg}</span>`;
+      document.body.appendChild(notice);
+      requestAnimationFrame(() => {
+        notice.classList.remove('translate-y-4', 'opacity-0');
+      });
+      setTimeout(() => {
+        notice.classList.add('opacity-0', 'translate-y-4');
+        setTimeout(() => notice.remove(), 300);
+      }, 3500);
+    }
+
+    // Bind Action Buttons
+    const savePolicyBtn = document.getElementById('btn-save-master-permissions');
+    if (savePolicyBtn) {
+      savePolicyBtn.addEventListener('click', () => {
+        pendingChanges = 0;
+        if (pendingLabel) {
+          pendingLabel.textContent = 'Changes pending: 0';
+          pendingLabel.classList.remove('text-secondary', 'font-bold');
+        }
+        triggerNotice('Security governance policies and role matrix successfully propagated.');
+      });
+    }
+
+    const saveMatrixBtn = document.getElementById('btn-save-matrix');
+    if (saveMatrixBtn) {
+      saveMatrixBtn.addEventListener('click', () => {
+        pendingChanges = 0;
+        if (pendingLabel) {
+          pendingLabel.textContent = 'Changes pending: 0';
+          pendingLabel.classList.remove('text-secondary', 'font-bold');
+        }
+        triggerNotice('Permissions matrix updated & synced with Okta SSO claims.');
+      });
+    }
+
+    const publishHandbookBtn = document.getElementById('btn-publish-handbook');
+    if (publishHandbookBtn) {
+      publishHandbookBtn.addEventListener('click', () => {
+        triggerNotice('Handbook v2.4 Published! Mandatory signing dispatched to 256 active users.');
+      });
+    }
+
+    const broadcastBtn = document.getElementById('btn-broadcast-submit');
+    if (broadcastBtn) {
+      broadcastBtn.addEventListener('click', () => {
+        const title = document.getElementById('broadcast-title-input');
+        const msg = document.getElementById('broadcast-msg-input');
+        if (title && (!title.value || !msg.value)) {
+          alert('Please enter an announcement title and message before broadcasting.');
+          return;
+        }
+        triggerNotice('Live announcement broadcasted across Dallas HQ & Hyd Hub workspaces.');
+        if (title) title.value = '';
+        if (msg) msg.value = '';
+      });
+    }
+
+    const exportBtn = document.getElementById('btn-export-audit');
+    if (exportBtn) {
+      exportBtn.addEventListener('click', () => {
+        triggerNotice('Downloading SOC2/ISO compliant security audit trail (CSV + SHA256)...');
+      });
+    }
+
+    const addSignerBtn = document.getElementById('btn-add-signer');
+    if (addSignerBtn) {
+      addSignerBtn.addEventListener('click', () => {
+        triggerNotice('Signer credential wizard initiated. Slot 4 is ready for verification.');
+      });
+    }
+
+  })();
+</script></main></div></body></html>

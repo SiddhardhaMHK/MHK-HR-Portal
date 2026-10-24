@@ -1,0 +1,1163 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"primary-container":"#131b2e","surface-variant":"#d3e4fe","on-tertiary-fixed-variant":"#783200","on-tertiary":"#ffffff","tertiary-fixed":"#ffdbca","surface-dim":"#cbdbf5","secondary-fixed":"#eaddff","surface-container":"#e5eeff","on-primary-container":"#7c839b","secondary-fixed-dim":"#d2bbff","surface":"#f8f9ff","surface-bright":"#f8f9ff","tertiary":"#000000","on-error-container":"#93000a","surface-container-lowest":"#ffffff","on-error":"#ffffff","surface-container-high":"#dce9ff","error-container":"#ffdad6","on-primary-fixed":"#131b2e","on-tertiary-container":"#d95f00","surface-container-low":"#eff4ff","surface-tint":"#565e74","outline-variant":"#c6c6cd","tertiary-fixed-dim":"#ffb690","on-tertiary-fixed":"#341100","error":"#ba1a1a","secondary":"#712ae2","surface-container-highest":"#d3e4fe","on-surface":"#0b1c30","outline":"#76777d","on-surface-variant":"#45464d","tertiary-container":"#341100","primary-fixed-dim":"#bec6e0","inverse-on-surface":"#eaf1ff","on-secondary-fixed":"#25005a","primary":"#000000","inverse-primary":"#bec6e0","inverse-surface":"#213145","on-secondary-fixed-variant":"#5a00c6","on-primary-fixed-variant":"#3f465c","primary-fixed":"#dae2fd","on-background":"#0b1c30","on-primary":"#ffffff","on-secondary":"#ffffff","background":"#f8f9ff","on-secondary-container":"#fffbff","secondary-container":"#8a4cfc"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"gutter":"1.5rem","gutter-mobile":"0.75rem","space-xl":"2.5rem","space-sm":"0.5rem","margin-mobile":"1rem","margin":"2rem","space-xs":"0.25rem","space-lg":"1.5rem","space-md":"1rem"},"fontFamily":{"headline-xl-mobile":["Plus Jakarta Sans"],"body-lg":["Inter"],"label-md":["Plus Jakarta Sans"],"label-xs":["Plus Jakarta Sans"],"headline-xl":["Plus Jakarta Sans"],"headline-lg-mobile":["Plus Jakarta Sans"],"body-sm":["Inter"],"headline-lg":["Plus Jakarta Sans"],"title-md":["Plus Jakarta Sans"],"body-md":["Inter"],"headline-md":["Plus Jakarta Sans"],"label-sm":["Plus Jakarta Sans"]},"fontSize":{"headline-xl-mobile":["1.75rem",{"lineHeight":"2.25rem","letterSpacing":"-0.02em","fontWeight":"700"}],"body-lg":["1rem",{"lineHeight":"1.6rem","fontWeight":"400"}],"label-md":["0.875rem",{"lineHeight":"1.25rem","letterSpacing":"0.01em","fontWeight":"600"}],"label-xs":["0.6875rem",{"lineHeight":"0.875rem","letterSpacing":"0.04em","fontWeight":"700"}],"headline-xl":["2.25rem",{"lineHeight":"2.75rem","letterSpacing":"-0.025em","fontWeight":"700"}],"headline-lg-mobile":["1.5rem",{"lineHeight":"2rem","letterSpacing":"-0.015em","fontWeight":"600"}],"body-sm":["0.75rem",{"lineHeight":"1.25rem","fontWeight":"400"}],"headline-lg":["1.75rem",{"lineHeight":"2.25rem","letterSpacing":"-0.02em","fontWeight":"600"}],"title-md":["1.125rem",{"lineHeight":"1.5rem","fontWeight":"600"}],"body-md":["0.875rem",{"lineHeight":"1.45rem","fontWeight":"400"}],"headline-md":["1.25rem",{"lineHeight":"1.75rem","letterSpacing":"-0.015em","fontWeight":"600"}],"label-sm":["0.75rem",{"lineHeight":"1rem","letterSpacing":"0.02em","fontWeight":"600"}]}}}}</script></head><body class="bg-background font-body-md text-on-surface antialiased selection:bg-secondary-fixed selection:text-on-secondary-fixed"><header class="fixed top-0 left-0 right-0 h-16 bg-surface-container-lowest/95 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50"><div class="h-16 w-full px-margin flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-sm"><div class="w-9 h-9 rounded-lg bg-primary-container flex items-center justify-center text-on-primary font-headline-md text-headline-md tracking-tight shadow-sm">MHK</div><div class="flex flex-col"><div class="flex items-center gap-space-xs"><span class="font-headline-md text-headline-md text-on-surface leading-none">MHK Tech</span><span class="px-space-xs py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-xs text-label-xs uppercase tracking-wider">HR Portal</span></div><span class="font-body-sm text-body-sm text-on-surface-variant leading-none mt-0.5">Enterprise Cloud</span></div></div><div class="h-6 w-[1px] bg-outline-variant/40 mx-space-xs hidden lg:block"></div><div class="relative hidden lg:block"><button class="flex items-center gap-space-xs px-space-sm py-1.5 rounded-lg bg-surface-container-low text-on-surface hover:bg-surface-container hover:text-on-surface transition-colors focus:ring-2 focus:ring-secondary/30" id="workspace-dropdown-btn" onclick="toggleWorkspaceDropdown()" type="button"><span class="w-2 h-2 rounded-full bg-secondary" id="workspace-indicator"></span><span class="font-label-md text-label-md" id="workspace-selected-label">My Workspace (Employee)</span><span class="material-symbols-outlined text-[18px] text-on-surface-variant transition-transform duration-200" id="workspace-chevron">expand_more</span></button><div class="absolute left-0 top-full mt-2 w-64 bg-surface-container-lowest rounded-xl shadow-xl border border-outline-variant/30 py-2 hidden z-50 backdrop-blur-lg" id="workspace-dropdown-menu"><div class="px-3 py-1.5 text-label-xs text-on-surface-variant font-bold uppercase tracking-wider">Switch Context</div><button class="w-full text-left px-3 py-2 text-label-md hover:bg-surface-container-low flex items-center gap-2 text-secondary font-semibold" onclick="selectWorkspace('My Workspace (Employee)', '#712ae2')"><span class="w-2 h-2 rounded-full bg-secondary"></span> My Workspace (Employee)</button><button class="w-full text-left px-3 py-2 text-label-md hover:bg-surface-container-low flex items-center gap-2 text-on-surface" onclick="selectWorkspace('Engineering Guild', '#10b981')"><span class="w-2 h-2 rounded-full bg-emerald-500"></span> Engineering Guild</button><button class="w-full text-left px-3 py-2 text-label-md hover:bg-surface-container-low flex items-center gap-2 text-on-surface" onclick="selectWorkspace('HR &amp; People Admin', '#f59e0b')"><span class="w-2 h-2 rounded-full bg-amber-500"></span> HR &amp; People Admin</button></div></div></div><div class="flex-1 max-w-xl mx-auto hidden md:block"><div class="relative flex items-center"><span class="material-symbols-outlined absolute left-3 text-outline text-[20px]">search</span><input class="w-full h-10 pl-10 pr-12 rounded-lg bg-surface-container-low text-on-surface placeholder:text-on-surface-variant font-body-md text-body-md border border-outline-variant/40 hover:bg-surface-container-high/50 cursor-pointer transition-colors shadow-sm focus:outline-none focus:ring-2 focus:ring-secondary/40" placeholder="Search employees, actions, or press ⌘K" readonly="" type="text"/><kbd class="absolute right-3 px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-xs text-label-xs uppercase border border-outline-variant/60">⌘K</kbd></div></div><div class="flex items-center gap-space-md"><div class="hidden xl:flex items-center gap-space-md px-space-sm py-1 rounded-lg bg-surface-container-low border border-outline-variant/30 text-on-surface-variant"><div class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px] text-secondary">schedule</span><span class="font-label-xs text-label-xs text-on-surface">IST:</span><span class="font-body-sm text-body-sm font-semibold text-on-surface" id="header-ist-time">10:45 AM</span></div><span class="text-outline-variant">•</span><div class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px] text-on-tertiary-container">schedule</span><span class="font-label-xs text-label-xs text-on-surface">CST:</span><span class="font-body-sm text-body-sm font-semibold text-on-surface" id="header-cst-time">11:15 PM</span></div></div><div class="flex items-center gap-space-sm relative"><button class="relative p-2 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" id="notif-btn" onclick="toggleNotifications()" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1.5 right-1.5 flex h-4 w-4 items-center justify-center rounded-full bg-error text-on-error font-label-xs text-[10px]" id="notif-badge">3</span></button><div class="absolute right-0 top-full mt-2 w-80 bg-surface-container-lowest rounded-xl shadow-2xl border border-outline-variant/30 py-3 hidden z-50" id="notif-panel"><div class="flex items-center justify-between px-4 pb-2 border-b border-outline-variant/20"><span class="font-headline-md text-label-md text-on-surface font-semibold">Notifications</span><button class="font-label-xs text-secondary hover:underline" onclick="markAllNotificationsRead()">Mark all read</button></div><div class="max-h-72 overflow-y-auto divide-y divide-outline-variant/10"><div class="p-3 hover:bg-surface-container-low cursor-pointer transition-colors"><p class="font-label-sm text-on-surface">Emergency Contact Reminder</p><p class="font-body-sm text-body-sm text-on-surface-variant">Update before Oct 31 to remain compliant.</p></div><div class="p-3 hover:bg-surface-container-low cursor-pointer transition-colors"><p class="font-label-sm text-on-surface">Sprint Demo Tomorrow</p><p class="font-body-sm text-body-sm text-on-surface-variant">Engineering team demo scheduled 3 PM.</p></div><div class="p-3 hover:bg-surface-container-low cursor-pointer transition-colors"><p class="font-label-sm text-on-surface">Leave Request Approved</p><p class="font-body-sm text-body-sm text-on-surface-variant">Casual Leave for Nov 04 approved by manager.</p></div></div></div><button class="relative group flex items-center gap-1.5 px-space-sm py-1.5 rounded-lg bg-gradient-to-r from-secondary to-secondary-container text-on-secondary font-label-md text-label-md shadow-[0_0_16px_-2px_rgba(113,42,226,0.35)] hover:shadow-[0_0_20px_0px_rgba(113,42,226,0.5)] transition-all active:scale-[0.98]" onclick="focusCopilotInput()" type="button"><span class="material-symbols-outlined text-[18px]">spark</span><span>Ask MHK AI</span></button></div><div class="h-6 w-[1px] bg-outline-variant/40"></div><div class="flex items-center gap-space-sm"><div class="flex items-center gap-2 pl-1 cursor-pointer" onclick="showToast('Profile: Alex Kumar (Sr. Software Engineer)')"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-secondary/20" src="https://lh3.googleusercontent.com/aida/AEtjO1WUT703aPZymf3CYI-D69cSXMF9yA-2R7YSqxmjDYngX1k0FZkjJaU3dvzj5Mwu4oVyUlB1XLTCRTkuJJEh9o3bOx8k1aMPBu5elZSY_k2ff_-P_wJcYuabDzVz1AL5W9bjhmpIMmIKrk8eP1QrHuhu8Jk7OXq5ovVG-vfuvyjE4BMb1GvjYGD92gSer3voZWGTvDcCwGF88HthKJaLoBxb2DioqQfFVFuEKXo9Si6VU2w2aCK3OHD_ll8SPPlQeI_ZiDbKFsoN220"/><div class="hidden sm:flex flex-col text-left"><div class="flex items-center gap-1"><span class="font-label-md text-label-md text-on-surface leading-tight">Alex Kumar</span><span class="px-1.5 py-0.2 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-xs text-[10px] uppercase font-bold">Employee</span></div><span class="font-body-sm text-body-sm text-on-surface-variant leading-tight">Sr. Software Engineer</span></div><span class="material-symbols-outlined text-[18px] text-on-surface-variant">keyboard_arrow_down</span></div></div></div></div></header><aside class="fixed left-0 top-16 bottom-0 w-64 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex flex-col justify-between py-space-md"><div class="flex-1 overflow-y-auto px-space-sm"><div class="px-space-sm mb-space-sm"><span class="font-label-xs text-label-xs uppercase tracking-wider text-on-surface-variant/80 font-bold">Main Navigation</span></div><nav class="flex flex-col gap-1" data-active-classes="bg-primary-container text-on-primary-container font-bold shadow-sm"><a aria-current="page" class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg transition-all bg-primary-container text-on-primary-container font-bold shadow-sm" data-path="home-dashboard" href="#"><span class="material-symbols-outlined text-[20px]">grid_view</span><span class="font-label-md text-label-md">Home Dashboard</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="company-feed" href="#"><span class="material-symbols-outlined text-[20px]">campaign</span><span class="font-label-md text-label-md">Company Feed</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="directory" href="#"><span class="material-symbols-outlined text-[20px]">badge</span><span class="font-label-md text-label-md">Directory</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="leave-attendance" href="#" onclick="openLeaveModal(); return false;"><span class="material-symbols-outlined text-[20px]">date_range</span><span class="font-label-md text-label-md">Leave &amp; Attendance</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="activity-reports" href="#" onclick="openReportModal('Daily Standup'); return false;"><span class="material-symbols-outlined text-[20px]">bar_chart</span><span class="font-label-md text-label-md">Activity &amp; Reports</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="documents" href="#"><span class="material-symbols-outlined text-[20px]">folder_shared</span><span class="font-label-md text-label-md">Documents</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="handbook" href="#"><span class="material-symbols-outlined text-[20px]">menu_book</span><span class="font-label-md text-label-md">Handbook</span></a><div class="my-space-xs mx-space-sm border-t border-outline-variant/30"></div><div class="px-space-sm mb-space-xs"><span class="font-label-xs text-label-xs uppercase tracking-wider text-on-surface-variant/80 font-bold">Self Service</span></div><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="my-requests" href="#" onclick="openLeaveModal(); return false;"><span class="material-symbols-outlined text-[20px]">send_and_archive</span><span class="font-label-md text-label-md">My Requests</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="expenses-timesheets" href="#"><span class="material-symbols-outlined text-[20px]">payments</span><span class="font-label-md text-label-md">Expenses &amp; Timesheets</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="tasks" href="#"><span class="material-symbols-outlined text-[20px]">task_alt</span><span class="font-label-md text-label-md">Tasks</span></a></nav></div><div class="px-space-sm pt-space-xs"><div class="p-space-sm rounded-lg bg-surface-container-low border border-outline-variant/30 flex items-center justify-between"><div class="flex items-center gap-2"><span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span><span class="font-body-sm text-body-sm text-on-surface font-medium">Service Status</span></div><span class="font-label-xs text-label-xs text-on-surface-variant">99.98%</span></div></div></aside><div class="pl-64"><main class="w-full pt-16 bg-background min-h-screen"><div class="flex flex-col w-full">
+<div class="p-space-md lg:p-margin flex flex-col gap-space-lg max-w-[1720px] mx-auto w-full">
+<!-- DISMISSIBLE URGENT ALERT BANNER -->
+<div class="relative overflow-hidden rounded-xl bg-error-container text-on-error-container p-space-md shadow-sm transition-all duration-300" id="urgent-alert">
+<div class="flex items-center justify-between gap-space-md flex-wrap sm:flex-nowrap">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-8 h-8 rounded-lg bg-error text-on-error flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[18px]">warning</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-md text-label-md font-semibold text-on-error-container">Action Required</span>
+<p class="font-body-md text-body-sm text-on-error-container/90 truncate">Your Emergency Contact information is incomplete. Please update before month-end to ensure compliance.</p>
+</div>
+</div>
+<div class="flex items-center gap-space-sm ml-auto">
+<button class="px-3 py-1.5 rounded-lg bg-on-error-container text-on-error font-label-sm text-label-sm hover:opacity-90 transition-opacity whitespace-nowrap shadow-sm cursor-pointer" onclick="showToast('Opened Emergency Contact verification form.')" type="button">
+            Update Details
+          </button>
+<button aria-label="Dismiss alert" class="p-1 rounded-md text-on-error-container/70 hover:text-on-error-container hover:bg-on-error-container/10 transition-colors" onclick="dismissUrgentAlert()" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+</div>
+</div>
+<!-- HERO / PERSONALIZED GREETING & DAILY SPRINT PROGRESS -->
+<div class="rounded-xl bg-surface-container-lowest p-space-lg shadow-sm">
+<div class="flex flex-col xl:flex-row xl:items-center justify-between gap-space-lg">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-space-xs flex-wrap">
+<h1 class="font-headline-lg text-headline-lg text-on-surface">Good morning, Alex 👋</h1>
+<span class="px-2.5 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-xs text-label-xs uppercase tracking-wider">Sprint Day 8</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Here is your team overview and daily schedule for <span class="font-semibold text-on-surface">Wednesday, Oct 24, 2026</span>.
+          </p>
+</div>
+<!-- Focus Sprint Progress Card -->
+<div class="flex items-center gap-space-md p-space-md rounded-xl bg-surface-container-low min-w-[320px] max-w-md shadow-xs">
+<div class="relative w-14 h-14 shrink-0 flex items-center justify-center">
+<svg class="w-14 h-14 transform -rotate-90" viewbox="0 0 36 36">
+<path class="text-surface-container-highest" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3.5"></path>
+<path class="text-secondary transition-all duration-500 ease-out" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" id="sprint-circle" stroke="currentColor" stroke-dasharray="75, 100" stroke-linecap="round" stroke-width="3.5"></path>
+</svg>
+<span class="absolute font-headline-md text-label-md font-bold text-secondary" id="sprint-percentage-text">75%</span>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex justify-between items-center mb-1">
+<span class="font-label-md text-label-sm text-on-surface">Daily Sprint Goal</span>
+<span class="font-label-xs text-label-xs text-on-surface-variant font-semibold" id="sprint-counter-text">3 of 4 Done</span>
+</div>
+<div class="w-full bg-surface-container-highest rounded-full h-2 overflow-hidden">
+<div class="bg-gradient-to-r from-secondary to-secondary-container h-2 rounded-full w-3/4 transition-all duration-500" id="sprint-progress-bar"></div>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-1.5 truncate">Next: Project Falcon Code Review at 2:00 PM</span>
+</div>
+</div>
+</div>
+</div>
+<!-- MAIN GRID SECTION: 8 COLS CONTENT + 4 COLS ACTION/WIDGETS -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-lg items-start">
+<!-- LEFT COLUMN (8 COLS ON DESKTOP) -->
+<div class="xl:col-span-8 flex flex-col gap-space-lg min-w-0">
+<!-- ATTENDANCE & DUAL HUB CLOCKS -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-space-md">
+<!-- Punch Card (7 cols) -->
+<div class="md:col-span-7 rounded-xl bg-surface-container-lowest p-space-lg shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between gap-space-sm mb-space-md">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse" id="punch-status-dot"></span>
+<span class="font-label-md text-label-md text-on-surface" id="punch-status-text">Active Session</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-xs text-label-xs" id="punch-hub-badge">Work From Hub</span>
+</div>
+<div class="flex flex-col sm:flex-row items-baseline justify-between gap-space-sm mb-space-lg">
+<div>
+<span class="font-body-sm text-body-sm text-on-surface-variant" id="punch-in-label">Clocked In at</span>
+<p class="font-headline-md text-headline-md text-on-surface mt-0.5" id="punch-in-time">09:15 AM <span class="font-label-xs text-label-xs text-on-surface-variant">IST</span></p>
+</div>
+<div class="sm:text-right">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Time Logged Today</span>
+<p class="font-headline-xl text-headline-xl text-secondary mt-0.5 tracking-tight font-bold transition-colors" id="live-timer">04:32:22</p>
+</div>
+</div>
+<div class="flex items-center gap-space-sm pt-space-xs">
+<button class="flex-1 py-2.5 px-space-md rounded-lg bg-gradient-to-r from-secondary to-secondary-container text-on-secondary font-label-md text-label-md shadow-[0_4px_14px_rgba(113,42,226,0.35)] hover:shadow-[0_6px_20px_rgba(113,42,226,0.45)] transition-all flex items-center justify-center gap-2 cursor-pointer active:scale-[0.98]" id="clock-toggle-btn" onclick="toggleClockInOut()" type="button">
+<span class="material-symbols-outlined text-[18px]" id="clock-btn-icon">logout</span>
+<span id="clock-btn-text">Clock Out</span>
+</button>
+<button class="px-space-md py-2.5 rounded-lg bg-surface-container-low text-on-surface hover:bg-surface-container font-label-md text-label-md transition-colors flex items-center justify-center gap-1.5 shadow-xs cursor-pointer" id="break-toggle-btn" onclick="toggleBreak()" type="button">
+<span class="material-symbols-outlined text-[18px]" id="break-btn-icon">coffee</span>
+<span id="break-btn-text">Take Break</span>
+</button>
+</div>
+</div>
+<!-- Dual Clocks Hub (5 cols) -->
+<div class="md:col-span-5 rounded-xl bg-surface-container-lowest p-space-lg shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-md text-label-md text-on-surface">Global Sync</span>
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">public</span>
+</div>
+<div class="flex flex-col gap-space-sm divide-y-0">
+<!-- Hyderabad -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed">
+<span class="material-symbols-outlined text-[16px]">location_on</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-sm text-on-surface leading-tight">Hyderabad Hub</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant leading-tight">IST (Local)</span>
+</div>
+</div>
+<div class="text-right">
+<span class="font-headline-md text-title-md text-on-surface font-bold" id="card-ist-time">10:45 AM</span>
+<p class="font-label-xs text-label-xs text-emerald-600 font-semibold">Active Hours</p>
+</div>
+</div>
+<!-- Dallas -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-surface-container-highest flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px]">domain</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-sm text-on-surface leading-tight">Dallas HQ</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant leading-tight">CDT (US Central)</span>
+</div>
+</div>
+<div class="text-right">
+<span class="font-headline-md text-title-md text-on-surface font-bold" id="card-cst-time">11:15 PM</span>
+<p class="font-label-xs text-label-xs text-on-surface-variant font-medium">Off-hours</p>
+</div>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs text-center">Next overlap window starts in 7h 45m</p>
+</div>
+</div>
+<!-- 7-DAY WEEKLY ACTIVITY TIMELINE -->
+<div class="rounded-xl bg-surface-container-lowest p-space-lg shadow-sm">
+<div class="flex items-center justify-between mb-space-md">
+<div>
+<h2 class="font-headline-md text-title-md text-on-surface">Weekly Attendance &amp; Activity Timeline</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Oct 20 — Oct 26, 2026 (Week 43)</p>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="px-2 py-1 rounded bg-surface-container-low text-on-surface font-label-xs text-label-xs">Total: 26.2 / 40.0 hrs</span>
+</div>
+</div>
+<!-- Weekly Horizontal Bar -->
+<div class="grid grid-cols-7 gap-space-xs overflow-x-auto pb-1">
+<!-- Mon 20 -->
+<div class="flex flex-col items-center p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors text-center cursor-pointer" onclick="showToast('Mon Oct 20: 8.8h logged (9:02 AM - 6:20 PM)')">
+<span class="font-label-xs text-label-xs text-on-surface-variant uppercase">Mon</span>
+<span class="font-headline-md text-label-md text-on-surface my-1">20</span>
+<span class="px-1.5 py-0.5 rounded-full bg-emerald-100 text-emerald-800 font-label-xs text-[10px] font-bold">8.8h</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant mt-1">9:02 - 18:20</span>
+</div>
+<!-- Tue 21 -->
+<div class="flex flex-col items-center p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors text-center cursor-pointer" onclick="showToast('Tue Oct 21: 8.4h logged (9:10 AM - 6:05 PM)')">
+<span class="font-label-xs text-label-xs text-on-surface-variant uppercase">Tue</span>
+<span class="font-headline-md text-label-md text-on-surface my-1">21</span>
+<span class="px-1.5 py-0.5 rounded-full bg-emerald-100 text-emerald-800 font-label-xs text-[10px] font-bold">8.4h</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant mt-1">9:10 - 18:05</span>
+</div>
+<!-- Wed 22 (TODAY - HIGHLIGHTED) -->
+<div class="flex flex-col items-center p-space-sm rounded-lg bg-primary-container text-on-primary-container shadow-md text-center transform scale-102 cursor-pointer" onclick="showToast('Today: Session in progress. Timer active.')">
+<div class="flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+<span class="font-label-xs text-label-xs uppercase font-bold text-secondary-fixed">Today</span>
+</div>
+<span class="font-headline-md text-label-md text-on-primary my-1 font-bold">22</span>
+<span class="px-1.5 py-0.5 rounded-full bg-secondary text-on-secondary font-label-xs text-[10px] font-bold" id="timeline-today-hours">4.5h+</span>
+<span class="font-body-sm text-[11px] text-primary-fixed-dim mt-1" id="timeline-today-status">In Session</span>
+</div>
+<!-- Thu 23 -->
+<div class="flex flex-col items-center p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors text-center cursor-pointer" onclick="showToast('Thu Oct 23: Planned Sprint Demo at 3:00 PM')">
+<span class="font-label-xs text-label-xs text-on-surface-variant uppercase">Thu</span>
+<span class="font-headline-md text-label-md text-on-surface my-1">23</span>
+<span class="px-1.5 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-xs text-[10px]">Planned</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant mt-1">Sprint Demo</span>
+</div>
+<!-- Fri 24 -->
+<div class="flex flex-col items-center p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors text-center cursor-pointer" onclick="showToast('Fri Oct 24: Release v2.4 staging deployment')">
+<span class="font-label-xs text-label-xs text-on-surface-variant uppercase">Fri</span>
+<span class="font-headline-md text-label-md text-on-surface my-1">24</span>
+<span class="px-1.5 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-xs text-[10px]">Planned</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant mt-1">Release v2.4</span>
+</div>
+<!-- Sat 25 -->
+<div class="flex flex-col items-center p-space-sm rounded-lg bg-surface-container opacity-60 text-center">
+<span class="font-label-xs text-label-xs text-on-surface-variant uppercase">Sat</span>
+<span class="font-headline-md text-label-md text-on-surface my-1">25</span>
+<span class="font-label-xs text-[10px] text-on-surface-variant mt-2 font-medium">Off</span>
+</div>
+<!-- Sun 26 -->
+<div class="flex flex-col items-center p-space-sm rounded-lg bg-surface-container opacity-60 text-center">
+<span class="font-label-xs text-label-xs text-on-surface-variant uppercase">Sun</span>
+<span class="font-headline-md text-label-md text-on-surface my-1">26</span>
+<span class="font-label-xs text-[10px] text-on-surface-variant mt-2 font-medium">Off</span>
+</div>
+</div>
+</div>
+<!-- LEAVE BALANCES WITH VISUAL METERS -->
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<h2 class="font-headline-md text-title-md text-on-surface">Leave Balances</h2>
+<a class="font-label-sm text-label-sm text-secondary hover:underline flex items-center gap-1 cursor-pointer" onclick="openLeaveModal('Casual Leave'); return false;">
+<span>Leave Calendar</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<!-- Casual Leave -->
+<div class="rounded-xl bg-surface-container-lowest p-space-md shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface">Casual Leave (CL)</span>
+<span class="material-symbols-outlined text-[20px] text-secondary">beach_access</span>
+</div>
+<div class="my-space-md">
+<div class="flex items-baseline gap-1">
+<span class="font-headline-lg text-headline-lg text-on-surface font-bold" id="balance-cl">10.5</span>
+<span class="font-body-md text-body-md text-on-surface-variant">/ 14 Days</span>
+</div>
+<div class="w-full bg-surface-container-high rounded-full h-2 mt-2 overflow-hidden">
+<div class="bg-secondary h-2 rounded-full w-3/4" id="meter-cl"></div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-xs text-label-xs text-emerald-600 font-semibold">Available</span>
+<button class="font-label-sm text-label-sm text-secondary hover:underline font-bold cursor-pointer" onclick="openLeaveModal('Casual Leave')" type="button">Apply CL</button>
+</div>
+</div>
+<!-- Sick Leave -->
+<div class="rounded-xl bg-surface-container-lowest p-space-md shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface">Sick Leave (SL)</span>
+<span class="material-symbols-outlined text-[20px] text-on-tertiary-container">medical_services</span>
+</div>
+<div class="my-space-md">
+<div class="flex items-baseline gap-1">
+<span class="font-headline-lg text-headline-lg text-on-surface font-bold" id="balance-sl">6.0</span>
+<span class="font-body-md text-body-md text-on-surface-variant">/ 8 Days</span>
+</div>
+<div class="w-full bg-surface-container-high rounded-full h-2 mt-2 overflow-hidden">
+<div class="bg-gradient-to-r from-amber-500 to-on-tertiary-container h-2 rounded-full w-9/12" id="meter-sl"></div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-xs text-label-xs text-emerald-600 font-semibold">Healthy Balance</span>
+<button class="font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface font-bold cursor-pointer" onclick="openLeaveModal('Sick Leave')" type="button">Apply SL</button>
+</div>
+</div>
+<!-- Loss of Pay -->
+<div class="rounded-xl bg-surface-container-lowest p-space-md shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface">Loss of Pay (LOP)</span>
+<span class="material-symbols-outlined text-[20px] text-emerald-600">verified</span>
+</div>
+<div class="my-space-md">
+<div class="flex items-baseline gap-1">
+<span class="font-headline-lg text-headline-lg text-on-surface font-bold">0</span>
+<span class="font-body-md text-body-md text-on-surface-variant">Days this Quarter</span>
+</div>
+<div class="w-full bg-surface-container-high rounded-full h-2 mt-2 overflow-hidden">
+<div class="bg-emerald-500 h-2 rounded-full w-full"></div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 font-label-xs text-label-xs font-bold">100% Attendance Rate</span>
+</div>
+</div>
+</div>
+</div>
+<!-- TASK LIST WIDGET -->
+<div class="rounded-xl bg-surface-container-lowest p-space-lg shadow-sm">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm mb-space-md">
+<div>
+<h2 class="font-headline-md text-title-md text-on-surface">Tasks &amp; Deliverables</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Track your high-priority sprint issues</p>
+</div>
+<!-- Filters -->
+<div class="flex items-center p-1 rounded-lg bg-surface-container-low" id="task-filter-group">
+<button class="px-3 py-1 rounded-md bg-surface-container-lowest text-on-surface font-label-sm text-label-sm shadow-xs font-semibold cursor-pointer transition-all" id="filter-today" onclick="switchTaskFilter('today')" type="button">Today (<span id="count-today">3</span>)</button>
+<button class="px-3 py-1 rounded-md text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm cursor-pointer transition-all" id="filter-week" onclick="switchTaskFilter('week')" type="button">This Week (7)</button>
+<button class="px-3 py-1 rounded-md text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm cursor-pointer transition-all" id="filter-completed" onclick="switchTaskFilter('completed')" type="button">Completed (<span id="count-completed">12</span>)</button>
+</div>
+</div>
+<!-- Tasks Items Container -->
+<div class="flex flex-col gap-space-sm" id="tasks-container">
+<!-- Task 1: Overdue/Urgent -->
+<div class="task-card p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-all flex flex-col md:flex-row md:items-center justify-between gap-space-sm shadow-xs" data-category="today" data-task-id="1">
+<div class="flex items-start gap-space-sm min-w-0">
+<input class="task-checkbox mt-1 h-4 w-4 rounded accent-secondary cursor-pointer" onchange="toggleTaskDone(this, 1)" type="checkbox"/>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2 flex-wrap">
+<span class="task-title font-headline-md text-label-md text-on-surface font-semibold transition-all">Review OAuth2 Migration PR #419</span>
+<span class="px-2 py-0.5 rounded-full bg-error/10 text-error font-label-xs text-label-xs font-bold">High Priority</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface-variant font-label-xs text-label-xs">Project Falcon</span>
+</div>
+<div class="flex items-center gap-space-sm mt-1 text-on-surface-variant font-body-sm text-body-sm">
+<span class="flex items-center gap-1 text-error font-medium">
+<span class="material-symbols-outlined text-[16px]">schedule</span> Due 2:00 PM
+                    </span>
+<span>•</span>
+<span class="truncate">Assignee: Alex Kumar (Self)</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-xs self-end md:self-center">
+<button class="task-action-btn px-3 py-1 rounded-lg bg-surface-container-lowest text-on-surface hover:bg-surface-container-high font-label-sm text-label-sm shadow-xs transition-colors cursor-pointer" onclick="handleTaskAction(this, 'Started PR #419 review')" type="button">Start</button>
+<button class="task-action-btn px-3 py-1 rounded-lg bg-secondary text-on-secondary font-label-sm text-label-sm shadow-xs transition-all hover:opacity-90 cursor-pointer" onclick="handleTaskAction(this, 'Submitted PR #419 approval!')" type="button">Submit</button>
+</div>
+</div>
+<!-- Task 2: Medium -->
+<div class="task-card p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-all flex flex-col md:flex-row md:items-center justify-between gap-space-sm shadow-xs" data-category="today" data-task-id="2">
+<div class="flex items-start gap-space-sm min-w-0">
+<input class="task-checkbox mt-1 h-4 w-4 rounded accent-secondary cursor-pointer" onchange="toggleTaskDone(this, 2)" type="checkbox"/>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2 flex-wrap">
+<span class="task-title font-headline-md text-label-md text-on-surface font-semibold transition-all">Finalize Employee Profile GraphQL Schema</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-xs text-label-xs font-bold">Medium</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface-variant font-label-xs text-label-xs">HRMS Portal v2.0</span>
+</div>
+<div class="flex items-center gap-space-sm mt-1 text-on-surface-variant font-body-sm text-body-sm">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">schedule</span> End of Day
+                    </span>
+<span>•</span>
+<span>Architecture Review</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-xs self-end md:self-center">
+<button class="task-action-btn px-3 py-1 rounded-lg bg-surface-container-lowest text-on-surface hover:bg-surface-container-high font-label-sm text-label-sm shadow-xs transition-colors cursor-pointer" onclick="handleTaskAction(this, 'Resumed Schema review')" type="button">Resume</button>
+</div>
+</div>
+<!-- Task 3: Low -->
+<div class="task-card p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-all flex flex-col md:flex-row md:items-center justify-between gap-space-sm shadow-xs" data-category="today" data-task-id="3">
+<div class="flex items-start gap-space-sm min-w-0">
+<input class="task-checkbox mt-1 h-4 w-4 rounded accent-secondary cursor-pointer" onchange="toggleTaskDone(this, 3)" type="checkbox"/>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2 flex-wrap">
+<span class="task-title font-headline-md text-label-md text-on-surface font-semibold transition-all">Draft Q4 Technical Debt Reduction Proposal</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-xs text-label-xs font-bold">Low</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface-variant font-label-xs text-label-xs">Core Platform</span>
+</div>
+<div class="flex items-center gap-space-sm mt-1 text-on-surface-variant font-body-sm text-body-sm">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">event</span> Oct 27, 2026
+                    </span>
+<span>•</span>
+<span>Doc in Google Workspace</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-xs self-end md:self-center">
+<button class="task-action-btn px-3 py-1 rounded-lg bg-surface-container-lowest text-on-surface hover:bg-surface-container-high font-label-sm text-label-sm shadow-xs transition-colors cursor-pointer" onclick="handleTaskAction(this, 'Started Tech Debt document proposal')" type="button">Start</button>
+</div>
+</div>
+</div>
+<div class="mt-space-md text-center">
+<a class="font-label-md text-label-sm text-secondary hover:underline inline-flex items-center gap-1 cursor-pointer" onclick="showToast('Loading full task repository (22 items)...')">
+<span>View All Tasks (22 active)</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- WELLNESS CHECK-IN & CONFIDENTIAL FEEDBACK -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-space-md">
+<!-- Wellness Check-in (5 cols) -->
+<div class="md:col-span-5 rounded-xl bg-surface-container-lowest p-space-lg shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-md text-label-md text-on-surface">Daily Wellness</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-xs text-[10px]">Confidential</span>
+</div>
+<p class="font-body-md text-body-sm text-on-surface-variant mb-space-md">How are you feeling today, Alex?</p>
+<!-- Tactile Emotion Chips -->
+<div class="grid grid-cols-5 gap-1.5" id="wellness-chips">
+<button class="flex flex-col items-center p-2 rounded-lg bg-surface-container-low hover:bg-surface-container transition-all text-center cursor-pointer" onclick="selectMood(this, 'Tough')" type="button">
+<span class="text-xl">🌧️</span>
+<span class="font-label-xs text-[10px] text-on-surface-variant mt-1">Tough</span>
+</button>
+<button class="flex flex-col items-center p-2 rounded-lg bg-surface-container-low hover:bg-surface-container transition-all text-center cursor-pointer" onclick="selectMood(this, 'Tired')" type="button">
+<span class="text-xl">🥱</span>
+<span class="font-label-xs text-[10px] text-on-surface-variant mt-1">Tired</span>
+</button>
+<button class="flex flex-col items-center p-2 rounded-lg bg-surface-container-low hover:bg-surface-container transition-all text-center cursor-pointer" onclick="selectMood(this, 'Okay')" type="button">
+<span class="text-xl">⛅</span>
+<span class="font-label-xs text-[10px] text-on-surface-variant mt-1">Okay</span>
+</button>
+<button class="flex flex-col items-center p-2 rounded-lg bg-surface-container-low hover:bg-surface-container transition-all text-center cursor-pointer" onclick="selectMood(this, 'Good')" type="button">
+<span class="text-xl">😊</span>
+<span class="font-label-xs text-[10px] text-on-surface-variant mt-1">Good</span>
+</button>
+<button class="flex flex-col items-center p-2 rounded-lg bg-secondary text-on-secondary shadow-[0_0_12px_rgba(113,42,226,0.3)] transition-all text-center font-bold cursor-pointer ring-2 ring-secondary/40" onclick="selectMood(this, 'Great')" type="button">
+<span class="text-xl">🚀</span>
+<span class="font-label-xs text-[10px] text-on-secondary mt-1">Great</span>
+</button>
+</div>
+<div class="mt-3 px-3 py-1.5 rounded-lg bg-surface-container text-secondary font-label-xs text-[11px] font-semibold text-center transition-all" id="wellness-response-msg">
+            Logged: Great! Have a productive sprint.
+          </div>
+</div>
+<div class="mt-space-md p-space-sm rounded-lg bg-surface-container-low text-on-surface-variant font-body-sm text-body-sm flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary">spa</span>
+<span>Need support? Employee Assistance Program is 24/7.</span>
+</div>
+</div>
+<!-- Confidential Feedback Form (7 cols) -->
+<div class="md:col-span-7 rounded-xl bg-surface-container-lowest p-space-lg shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] text-secondary">record_voice_over</span>
+<span class="font-label-md text-label-md text-on-surface">Anonymous Pulse Feedback</span>
+</div>
+<span class="font-label-xs text-label-xs text-on-surface-variant">Direct to People Ops</span>
+</div>
+<form class="flex flex-col gap-space-sm" id="feedback-form" onsubmit="handleFeedbackSubmit(event)">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm">
+<div>
+<label class="block font-label-xs text-label-xs text-on-surface-variant uppercase mb-1">Category</label>
+<select class="w-full h-9 px-2.5 rounded-lg bg-surface-container-low text-on-surface font-body-sm text-body-sm focus:outline-none focus:ring-1 focus:ring-secondary" id="feedback-category">
+<option>Workplace &amp; Culture</option>
+<option>Management &amp; Leadership</option>
+<option>Tools &amp; Technology</option>
+<option>Facilities &amp; Remote Setup</option>
+</select>
+</div>
+<div>
+<label class="block font-label-xs text-label-xs text-on-surface-variant uppercase mb-1">Team Sentiment</label>
+<div class="flex items-center gap-1 h-9 px-2 rounded-lg bg-surface-container-low text-amber-500" id="star-rating-container" onmouseleave="resetStarHighlight()">
+<span class="material-symbols-outlined text-[20px] cursor-pointer hover:scale-110 transition-transform" data-star="1" onclick="setSentimentRating(1)" onmouseenter="previewStars(1)" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[20px] cursor-pointer hover:scale-110 transition-transform" data-star="2" onclick="setSentimentRating(2)" onmouseenter="previewStars(2)" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[20px] cursor-pointer hover:scale-110 transition-transform" data-star="3" onclick="setSentimentRating(3)" onmouseenter="previewStars(3)" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[20px] cursor-pointer hover:scale-110 transition-transform" data-star="4" onclick="setSentimentRating(4)" onmouseenter="previewStars(4)" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[20px] cursor-pointer hover:scale-110 transition-transform text-outline-variant" data-star="5" onclick="setSentimentRating(5)" onmouseenter="previewStars(5)" style="font-variation-settings: 'FILL' 0;">star</span>
+</div>
+</div>
+</div>
+<div>
+<textarea class="w-full p-2 rounded-lg bg-surface-container-low text-on-surface placeholder:text-on-surface-variant font-body-sm text-body-sm focus:outline-none focus:ring-1 focus:ring-secondary resize-none" id="feedback-text" placeholder="Share anonymous thoughts or feedback with leadership..." required="" rows="2"></textarea>
+</div>
+<div class="flex items-center justify-between gap-space-sm pt-1">
+<label class="flex items-center gap-2 cursor-pointer">
+<input checked="" class="h-4 w-4 rounded accent-secondary cursor-pointer" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Keep strictly anonymous</span>
+</label>
+<button class="px-4 py-1.5 rounded-lg bg-primary-container text-on-primary-container hover:bg-surface-container-highest font-label-sm text-label-sm transition-colors shadow-xs cursor-pointer flex items-center gap-1.5" id="feedback-submit-btn" type="submit">
+<span>Submit Feedback</span>
+</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN / SIDEBAR NOTIFICATIONS & AI COPILOT (4 COLS ON DESKTOP) -->
+<div class="xl:col-span-4 flex flex-col gap-space-lg min-w-0">
+<!-- ACTIVITY REPORTS (DAILY STANDUP & WEEKLY SUMMARY) -->
+<div class="rounded-xl bg-surface-container-lowest p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="font-headline-md text-title-md text-on-surface">Reports &amp; Standups</span>
+<span class="material-symbols-outlined text-[20px] text-secondary">assignment</span>
+</div>
+<!-- Daily Standup Card -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-sm text-on-surface font-semibold">Daily Standup Update</span>
+<span class="px-2 py-0.5 rounded-full bg-error/10 text-error font-label-xs text-label-xs font-bold">Pending for today</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Engineering Sync scheduled for 11:30 AM IST. Please record tasks.</p>
+<button class="w-full py-2 rounded-lg bg-surface-container-lowest hover:bg-surface-container text-on-surface font-label-sm text-label-sm shadow-xs transition-colors flex items-center justify-center gap-2 cursor-pointer active:scale-[0.99]" onclick="openReportModal('Daily Standup')" type="button">
+<span class="material-symbols-outlined text-[18px] text-secondary">mic</span>
+<span>Compose Update with AI</span>
+</button>
+</div>
+<!-- Weekly Report Card -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-sm text-on-surface font-semibold">Week 43 Summary</span>
+<span class="font-label-xs text-label-xs text-on-surface-variant">Due in 2 days</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[16px] text-emerald-600">check_circle</span>
+<span>18 commits, 4 PR reviews aggregated</span>
+</div>
+<button class="w-full py-2 rounded-lg bg-gradient-to-r from-secondary to-secondary-container text-on-secondary font-label-sm text-label-sm shadow-[0_2px_10px_rgba(113,42,226,0.25)] hover:shadow-[0_4px_14px_rgba(113,42,226,0.35)] transition-all flex items-center justify-center gap-1.5 cursor-pointer active:scale-[0.99]" onclick="openReportModal('Weekly Summary')" type="button">
+<span class="material-symbols-outlined text-[16px]">auto_awesome</span>
+<span>Generate AI Report</span>
+</button>
+</div>
+</div>
+<!-- UPCOMING CELEBRATIONS & HOLIDAYS -->
+<div class="rounded-xl bg-surface-container-lowest p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-md text-title-md text-on-surface">Community &amp; Calendar</h3>
+<span class="font-label-xs text-label-xs text-on-surface-variant uppercase font-semibold">October / November</span>
+</div>
+<!-- Upcoming Birthdays -->
+<div class="flex flex-col gap-space-sm">
+<span class="font-label-xs text-label-xs uppercase tracking-wider text-on-surface-variant font-bold">Upcoming Birthdays</span>
+<div class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors cursor-pointer" onclick="showToast('Wished Sarah Jenkins an early Happy Birthday! 🎂')">
+<div class="flex items-center gap-space-sm">
+<img class="w-8 h-8 rounded-full object-cover" data-alt="Professional headshot of a smiling woman engineer with dark brown hair in modern office background, soft warm lighting, corporate portrait style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAQRyB1h2sXkk3Lxj0EAhvP2u7ZqYGtf5POslyw4kearfPBjf9TmWTgMqSyqaMoV6JtFMpRQB-AGZ_mji1i5XspdSdHQ0cbEb5z6a0UAfPyGm-m0bD_DRIy-MWfrtcJsFptoM5gdYAah9Rwq5CGVbEmlepQoCT8OcYkovdpZVuSoCuLnGYtlrOrWOdSF9h7VEJfRH2YnrHEL0JkcbbZCb0b3vztW4JOxrfG4fguhHFhn5KWuvUOXT7Sw"/>
+<div class="flex flex-col">
+<span class="font-label-md text-label-sm text-on-surface leading-tight">Sarah Jenkins</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant leading-tight">Product Designer</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-xs text-label-xs font-semibold">Tomorrow 🎂</span>
+</div>
+<div class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors cursor-pointer" onclick="showToast('Vikram Patel\'s birthday is on Oct 28')">
+<div class="flex items-center gap-space-sm">
+<img class="w-8 h-8 rounded-full object-cover" data-alt="Professional corporate headshot of an Indian male technical lead in dark navy collared shirt against clean office interior, warm diffused light." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLW5A5gcG3WTbzPffBmPwMPs0fSbwIQ4aH8KYbiwAVjVzzxmX0jpjCSI41ExP1H6xChAQ6djiELQ4rWF-e0YgECQ1cloeg--Vf9DADljcXFMkVDb13O9EWK-e3UJJaD5VCQx2FALoWuYrwez3vv5uzYMHTA0xZfHh9MyUSfFBaIhphvpDiid6erA5u5rAoc43dNFafL6kOmIQGcTzgJRPHjxX4gy_Q3C4ymdl4B0Zz0ilO0_lhSpt5Dg"/>
+<div class="flex flex-col">
+<span class="font-label-md text-label-sm text-on-surface leading-tight">Vikram Patel</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant leading-tight">Engineering Lead</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-xs text-label-xs">Oct 28</span>
+</div>
+</div>
+<!-- Upcoming Company Holidays -->
+<div class="flex flex-col gap-space-sm pt-space-xs">
+<span class="font-label-xs text-label-xs uppercase tracking-wider text-on-surface-variant font-bold">Company Holidays</span>
+<div class="p-space-sm rounded-lg bg-gradient-to-r from-tertiary-fixed/40 to-surface-container-low flex items-center justify-between cursor-pointer" onclick="showToast('Diwali Festival Break: 3-day company holiday')">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-lg bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed font-bold">
+                  🪔
+                </div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-sm text-on-surface leading-tight">Diwali Festival Break</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant leading-tight">All India Hubs</span>
+</div>
+</div>
+<div class="text-right">
+<span class="font-label-xs text-label-xs text-on-tertiary-container font-bold block">Nov 1</span>
+<span class="font-label-xs text-[10px] text-on-surface-variant">Mandatory</span>
+</div>
+</div>
+</div>
+</div>
+<!-- DOCKED AI COPILOT INTERACTIVE WIDGET -->
+<div class="rounded-xl bg-gradient-to-br from-primary-container via-surface-container-lowest to-surface-container-low p-space-lg text-on-surface shadow-md relative overflow-hidden" id="copilot-widget">
+<div class="flex items-center gap-2 mb-space-sm">
+<div class="w-7 h-7 rounded-lg bg-secondary text-on-secondary flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[18px]">spark</span>
+</div>
+<div>
+<h3 class="font-headline-md text-label-md text-on-surface font-bold leading-tight">Ask MHK Copilot</h3>
+<span class="font-body-sm text-body-sm text-on-surface-variant leading-tight">HR &amp; Workflow AI Assistant</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">Instant answers to leave balances, policy clauses, and workflow drafts.</p>
+<!-- Dynamic Chat Conversation Stream -->
+<div class="flex flex-col gap-2 max-h-48 overflow-y-auto mb-3 hidden" id="copilot-chat-stream"></div>
+<div class="flex flex-col gap-1.5 mb-space-md" id="copilot-suggestions">
+<button class="text-left p-2 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-body-sm text-body-sm transition-colors flex items-center justify-between cursor-pointer" onclick="useCopilotSuggestion('What is my remaining CL balance?')" type="button">
+<span class="truncate">"What is my remaining CL balance?"</span>
+<span class="material-symbols-outlined text-[16px] text-secondary shrink-0">arrow_forward</span>
+</button>
+<button class="text-left p-2 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-body-sm text-body-sm transition-colors flex items-center justify-between cursor-pointer" onclick="useCopilotSuggestion('Draft my daily engineering report')" type="button">
+<span class="truncate">"Draft my daily engineering report"</span>
+<span class="material-symbols-outlined text-[16px] text-secondary shrink-0">arrow_forward</span>
+</button>
+</div>
+<div class="relative flex items-center">
+<input class="w-full h-9 pl-3 pr-9 rounded-lg bg-surface-container-low text-on-surface placeholder:text-on-surface-variant font-body-sm text-body-sm focus:outline-none focus:ring-1 focus:ring-secondary" id="copilot-input" onkeydown="if(event.key==='Enter') sendCopilotQuery()" placeholder="Type prompt or question..." type="text"/>
+<button class="absolute right-1 w-7 h-7 rounded-md bg-secondary text-on-secondary flex items-center justify-center hover:opacity-90 cursor-pointer active:scale-95 transition-all" onclick="sendCopilotQuery()" type="button">
+<span class="material-symbols-outlined text-[16px]">send</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- LEAVE REQUEST MODAL -->
+<div class="fixed inset-0 bg-primary/40 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden" id="leave-modal">
+<div class="bg-surface-container-lowest rounded-2xl max-w-lg w-full p-6 shadow-2xl border border-outline-variant/30 flex flex-col gap-4 animate-in fade-in zoom-in-95 duration-200">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-lg bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">date_range</span>
+</div>
+<h3 class="font-headline-md text-title-md text-on-surface">Apply for Leave</h3>
+</div>
+<button class="p-1 rounded-md text-on-surface-variant hover:bg-surface-container" onclick="closeLeaveModal()" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<form class="flex flex-col gap-3" onsubmit="submitLeaveApplication(event)">
+<div>
+<label class="block font-label-xs text-label-xs text-on-surface-variant uppercase mb-1">Leave Type</label>
+<select class="w-full h-10 px-3 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-secondary/40" id="leave-type-select">
+<option value="Casual Leave">Casual Leave (CL) - 10.5 Available</option>
+<option value="Sick Leave">Sick Leave (SL) - 6.0 Available</option>
+<option value="Privilege Leave">Privilege Leave (PL) - 12.0 Available</option>
+</select>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<div>
+<label class="block font-label-xs text-label-xs text-on-surface-variant uppercase mb-1">Start Date</label>
+<input class="w-full h-10 px-3 rounded-lg bg-surface-container-low text-on-surface font-body-sm text-body-sm focus:outline-none focus:ring-2 focus:ring-secondary/40" id="leave-start-date" required="" type="date" value="2026-10-27"/>
+</div>
+<div>
+<label class="block font-label-xs text-label-xs text-on-surface-variant uppercase mb-1">End Date</label>
+<input class="w-full h-10 px-3 rounded-lg bg-surface-container-low text-on-surface font-body-sm text-body-sm focus:outline-none focus:ring-2 focus:ring-secondary/40" id="leave-end-date" required="" type="date" value="2026-10-28"/>
+</div>
+</div>
+<div>
+<label class="block font-label-xs text-label-xs text-on-surface-variant uppercase mb-1">Reason for Leave</label>
+<textarea class="w-full p-2.5 rounded-lg bg-surface-container-low text-on-surface placeholder:text-on-surface-variant font-body-sm text-body-sm focus:outline-none focus:ring-2 focus:ring-secondary/40 resize-none" id="leave-reason" placeholder="Brief reason for your manager..." required="" rows="3"></textarea>
+</div>
+<div class="p-3 rounded-lg bg-surface-container-low flex items-center justify-between">
+<span class="font-body-sm text-on-surface-variant">Estimated Duration:</span>
+<span class="font-label-md text-secondary font-bold" id="leave-calc-days">2 Days (Deducted from balance)</span>
+</div>
+<div class="flex items-center justify-end gap-2 pt-2">
+<button class="px-4 py-2 rounded-lg bg-surface-container text-on-surface font-label-sm text-label-sm hover:bg-surface-container-high transition-colors" onclick="closeLeaveModal()" type="button">Cancel</button>
+<button class="px-5 py-2 rounded-lg bg-secondary text-on-secondary font-label-sm text-label-sm shadow-md hover:opacity-90 transition-opacity" type="submit">Submit Request</button>
+</div>
+</form>
+</div>
+</div>
+<!-- AI REPORT MODAL -->
+<div class="fixed inset-0 bg-primary/40 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden" id="report-modal">
+<div class="bg-surface-container-lowest rounded-2xl max-w-lg w-full p-6 shadow-2xl border border-outline-variant/30 flex flex-col gap-4 animate-in fade-in zoom-in-95 duration-200">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-lg bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">auto_awesome</span>
+</div>
+<h3 class="font-headline-md text-title-md text-on-surface" id="report-modal-title">AI Standup Generator</h3>
+</div>
+<button class="p-1 rounded-md text-on-surface-variant hover:bg-surface-container" onclick="closeReportModal()" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<div class="flex flex-col gap-3">
+<div class="p-4 rounded-xl bg-surface-container-low border border-outline-variant/20 flex flex-col gap-2" id="report-modal-content">
+<div class="flex items-center gap-2 text-secondary font-label-sm" id="report-loading-state">
+<span class="material-symbols-outlined animate-spin text-[18px]">progress_activity</span>
+<span>Aggregating Git commits, PR merges, and Jira cards...</span>
+</div>
+<div class="hidden flex-col gap-2" id="report-output-state">
+<span class="font-label-xs uppercase text-on-surface-variant font-bold">Generated Summary</span>
+<p class="font-body-md text-body-sm text-on-surface" id="report-generated-text"></p>
+<div class="flex items-center gap-2 pt-2">
+<span class="px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 text-[10px] font-bold">Verified</span>
+<span class="text-body-sm text-on-surface-variant text-[11px]">Syncing to Slack #engineering</span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-end gap-2 pt-2">
+<button class="px-4 py-2 rounded-lg bg-surface-container text-on-surface font-label-sm text-label-sm hover:bg-surface-container-high transition-colors" onclick="closeReportModal()" type="button">Close</button>
+<button class="px-5 py-2 rounded-lg bg-secondary text-on-secondary font-label-sm text-label-sm shadow-md hover:opacity-90 transition-opacity" id="report-copy-btn" onclick="confirmReportPublish()" type="button">Publish to Team</button>
+</div>
+</div>
+</div>
+</div>
+<!-- TOAST NOTIFICATION CONTAINER -->
+<div class="fixed bottom-6 right-6 z-50 flex flex-col gap-2 pointer-events-none" id="toast-container"></div>
+<script>
+  // 1. LIVE TIMER & PUNCH IN/OUT & BREAK SYSTEM
+  let isClockedIn = true;
+  let isOnBreak = false;
+  let seconds = 22;
+  let minutes = 32;
+  let hours = 4;
+  let timerInterval = null;
+
+  function pad(n) {
+    return String(n).padStart(2, '0');
+  }
+
+  function startLiveTimer() {
+    if (timerInterval) clearInterval(timerInterval);
+    timerInterval = setInterval(() => {
+      if (isClockedIn && !isOnBreak) {
+        seconds++;
+        if (seconds >= 60) {
+          seconds = 0;
+          minutes++;
+          if (minutes >= 60) {
+            minutes = 0;
+            hours++;
+          }
+        }
+        const timerEl = document.getElementById('live-timer');
+        if (timerEl) {
+          timerEl.textContent = `${pad(hours)}:${pad(minutes)}:${pad(seconds)}`;
+        }
+      }
+    }, 1000);
+  }
+
+  function toggleClockInOut() {
+    const btn = document.getElementById('clock-toggle-btn');
+    const btnText = document.getElementById('clock-btn-text');
+    const btnIcon = document.getElementById('clock-btn-icon');
+    const statusText = document.getElementById('punch-status-text');
+    const statusDot = document.getElementById('punch-status-dot');
+    const timerEl = document.getElementById('live-timer');
+    const breakBtn = document.getElementById('break-toggle-btn');
+    const nowStr = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+
+    if (isClockedIn) {
+      isClockedIn = false;
+      isOnBreak = false;
+      btn.className = "flex-1 py-2.5 px-space-md rounded-lg bg-emerald-600 text-on-secondary font-label-md text-label-md shadow-[0_4px_14px_rgba(16,185,129,0.35)] hover:shadow-[0_6px_20px_rgba(16,185,129,0.45)] transition-all flex items-center justify-center gap-2 cursor-pointer active:scale-[0.98]";
+      btnText.textContent = "Clock In";
+      btnIcon.textContent = "login";
+      statusText.textContent = "Session Closed";
+      statusDot.className = "w-2.5 h-2.5 rounded-full bg-slate-400";
+      timerEl.classList.remove('text-secondary');
+      timerEl.classList.add('text-on-surface-variant');
+      breakBtn.disabled = true;
+      breakBtn.classList.add('opacity-50', 'cursor-not-allowed');
+      document.getElementById('timeline-today-status').textContent = 'Shift Ended';
+      showToast(`Clock-out logged at ${nowStr}. Have a great evening!`);
+    } else {
+      isClockedIn = true;
+      btn.className = "flex-1 py-2.5 px-space-md rounded-lg bg-gradient-to-r from-secondary to-secondary-container text-on-secondary font-label-md text-label-md shadow-[0_4px_14px_rgba(113,42,226,0.35)] hover:shadow-[0_6px_20px_rgba(113,42,226,0.45)] transition-all flex items-center justify-center gap-2 cursor-pointer active:scale-[0.98]";
+      btnText.textContent = "Clock Out";
+      btnIcon.textContent = "logout";
+      statusText.textContent = "Active Session";
+      statusDot.className = "w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse";
+      timerEl.classList.remove('text-on-surface-variant');
+      timerEl.classList.add('text-secondary');
+      breakBtn.disabled = false;
+      breakBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+      document.getElementById('timeline-today-status').textContent = 'In Session';
+      showToast(`Clock-in recorded at ${nowStr}. Welcome back!`);
+    }
+  }
+
+  function toggleBreak() {
+    if (!isClockedIn) return;
+    const breakBtn = document.getElementById('break-toggle-btn');
+    const breakText = document.getElementById('break-btn-text');
+    const breakIcon = document.getElementById('break-btn-icon');
+    const statusText = document.getElementById('punch-status-text');
+    const statusDot = document.getElementById('punch-status-dot');
+
+    if (!isOnBreak) {
+      isOnBreak = true;
+      breakBtn.className = "px-space-md py-2.5 rounded-lg bg-amber-500 text-white font-label-md text-label-md transition-colors flex items-center justify-center gap-1.5 shadow-sm cursor-pointer";
+      breakText.textContent = "Resume Work";
+      breakIcon.textContent = "play_arrow";
+      statusText.textContent = "On Break";
+      statusDot.className = "w-2.5 h-2.5 rounded-full bg-amber-500 animate-ping";
+      showToast('Break started. Live timer paused.');
+    } else {
+      isOnBreak = false;
+      breakBtn.className = "px-space-md py-2.5 rounded-lg bg-surface-container-low text-on-surface hover:bg-surface-container font-label-md text-label-md transition-colors flex items-center justify-center gap-1.5 shadow-xs cursor-pointer";
+      breakText.textContent = "Take Break";
+      breakIcon.textContent = "coffee";
+      statusText.textContent = "Active Session";
+      statusDot.className = "w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse";
+      showToast('Welcome back! Session timer resumed.');
+    }
+  }
+
+  // 2. TASK FILTERING & COMPLETION & DAILY SPRINT PROGRESS
+  let completedTodayCount = 0;
+  const totalSprintTasks = 4;
+  let baseDoneSprintTasks = 3;
+
+  function updateSprintGoalUI() {
+    const totalDone = Math.min(totalSprintTasks, baseDoneSprintTasks + completedTodayCount);
+    const pct = Math.round((totalDone / totalSprintTasks) * 100);
+    const circle = document.getElementById('sprint-circle');
+    const pctText = document.getElementById('sprint-percentage-text');
+    const counterText = document.getElementById('sprint-counter-text');
+    const progressBar = document.getElementById('sprint-progress-bar');
+
+    if (circle) circle.setAttribute('stroke-dasharray', `${pct}, 100`);
+    if (pctText) pctText.textContent = `${pct}%`;
+    if (counterText) counterText.textContent = `${totalDone} of ${totalSprintTasks} Done`;
+    if (progressBar) progressBar.style.width = `${pct}%`;
+  }
+
+  function toggleTaskDone(checkbox, taskId) {
+    const card = checkbox.closest('.task-card');
+    const title = card.querySelector('.task-title');
+    if (checkbox.checked) {
+      title.classList.add('line-through', 'text-on-surface-variant', 'opacity-60');
+      completedTodayCount++;
+      showToast(`Task marked completed! Sprint updated.`);
+    } else {
+      title.classList.remove('line-through', 'text-on-surface-variant', 'opacity-60');
+      completedTodayCount = Math.max(0, completedTodayCount - 1);
+      showToast(`Task reopened.`);
+    }
+    updateSprintGoalUI();
+  }
+
+  function handleTaskAction(button, message) {
+    button.textContent = "Completed";
+    button.className = "px-3 py-1 rounded-lg bg-emerald-600 text-white font-label-sm text-label-sm shadow-xs transition-colors flex items-center gap-1";
+    button.innerHTML = '<span class="material-symbols-outlined text-[14px]">check</span> Completed';
+    button.disabled = true;
+    showToast(message || 'Task status updated!');
+  }
+
+  const tasksData = {
+    today: [
+      { id: 1, title: 'Review OAuth2 Migration PR #419', tag: 'High Priority', tagClass: 'bg-error/10 text-error', project: 'Project Falcon', due: 'Due 2:00 PM', dueIcon: 'schedule', meta: 'Assignee: Alex Kumar (Self)', actions: ['Start', 'Submit'] },
+      { id: 2, title: 'Finalize Employee Profile GraphQL Schema', tag: 'Medium', tagClass: 'bg-secondary-fixed text-on-secondary-fixed', project: 'HRMS Portal v2.0', due: 'End of Day', dueIcon: 'schedule', meta: 'Architecture Review', actions: ['Resume'] },
+      { id: 3, title: 'Draft Q4 Technical Debt Reduction Proposal', tag: 'Low', tagClass: 'bg-surface-container-high text-on-surface-variant', project: 'Core Platform', due: 'Oct 27, 2026', dueIcon: 'event', meta: 'Doc in Google Workspace', actions: ['Start'] }
+    ],
+    week: [
+      { id: 4, title: 'Prepare Architecture Deck for Dallas HQ Summit', tag: 'High Priority', tagClass: 'bg-error/10 text-error', project: 'Leadership Sync', due: 'Oct 26, 2026', dueIcon: 'event', meta: 'Slides deck', actions: ['Start'] },
+      { id: 5, title: 'Conduct Performance Benchmark on User Search API', tag: 'Medium', tagClass: 'bg-secondary-fixed text-on-secondary-fixed', project: 'Core Platform', due: 'Oct 25, 2026', dueIcon: 'schedule', meta: 'Grafana telemetry', actions: ['Resume'] },
+      { id: 6, title: 'Review New Intern Pull Requests & Setup Mentor Session', tag: 'Low', tagClass: 'bg-surface-container-high text-on-surface-variant', project: 'Team Culture', due: 'Oct 28, 2026', dueIcon: 'event', meta: 'Google Meet', actions: ['Start'] }
+    ],
+    completed: [
+      { id: 7, title: 'Refactor Auth Token Cache Service to Redis 7', tag: 'Completed', tagClass: 'bg-emerald-100 text-emerald-800', project: 'Core Platform', due: 'Oct 22, 2026', dueIcon: 'check_circle', meta: 'Merged to master', actions: [] },
+      { id: 8, title: 'Update Personal Emergency Details in Workday', tag: 'Completed', tagClass: 'bg-emerald-100 text-emerald-800', project: 'Compliance', due: 'Oct 21, 2026', dueIcon: 'check_circle', meta: 'HR Verified', actions: [] }
+    ]
+  };
+
+  function switchTaskFilter(tab) {
+    const tabs = ['today', 'week', 'completed'];
+    tabs.forEach(t => {
+      const btn = document.getElementById(`filter-${t}`);
+      if (btn) {
+        if (t === tab) {
+          btn.className = "px-3 py-1 rounded-md bg-surface-container-lowest text-on-surface font-label-sm text-label-sm shadow-xs font-semibold cursor-pointer transition-all";
+        } else {
+          btn.className = "px-3 py-1 rounded-md text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm cursor-pointer transition-all";
+        }
+      }
+    });
+
+    const container = document.getElementById('tasks-container');
+    const items = tasksData[tab] || [];
+    container.innerHTML = items.map(item => `
+      <div class="task-card p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-all flex flex-col md:flex-row md:items-center justify-between gap-space-sm shadow-xs" data-category="${tab}" data-task-id="${item.id}">
+        <div class="flex items-start gap-space-sm min-w-0">
+          <input type="checkbox" ${tab === 'completed' ? 'checked disabled' : ''} class="task-checkbox mt-1 h-4 w-4 rounded accent-secondary cursor-pointer" onchange="toggleTaskDone(this, ${item.id})"/>
+          <div class="flex flex-col min-w-0">
+            <div class="flex items-center gap-2 flex-wrap">
+              <span class="task-title font-headline-md text-label-md text-on-surface font-semibold transition-all ${tab === 'completed' ? 'line-through text-on-surface-variant opacity-60' : ''}">${item.title}</span>
+              <span class="px-2 py-0.5 rounded-full ${item.tagClass} font-label-xs text-label-xs font-bold">${item.tag}</span>
+              <span class="px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface-variant font-label-xs text-label-xs">${item.project}</span>
+            </div>
+            <div class="flex items-center gap-space-sm mt-1 text-on-surface-variant font-body-sm text-body-sm">
+              <span class="flex items-center gap-1 ${item.tag.includes('High') ? 'text-error font-medium' : ''}">
+                <span class="material-symbols-outlined text-[16px]">${item.dueIcon}</span> ${item.due}
+              </span>
+              <span>•</span>
+              <span class="truncate">${item.meta}</span>
+            </div>
+          </div>
+        </div>
+        <div class="flex items-center gap-space-xs self-end md:self-center">
+          ${item.actions.map(action => `
+            <button type="button" onclick="handleTaskAction(this, '${action} completed for ${item.title.substring(0, 20)}...')" class="task-action-btn px-3 py-1 rounded-lg ${action === 'Submit' ? 'bg-secondary text-on-secondary shadow-xs hover:opacity-90' : 'bg-surface-container-lowest text-on-surface hover:bg-surface-container-high shadow-xs'} font-label-sm text-label-sm transition-colors cursor-pointer">
+              ${action}
+            </button>
+          `).join('')}
+        </div>
+      </div>
+    `).join('');
+  }
+
+  // 3. LEAVE MODAL & APPLY ACTIONS
+  let currentCL = 10.5;
+  let currentSL = 6.0;
+
+  function openLeaveModal(defaultType) {
+    const modal = document.getElementById('leave-modal');
+    if (defaultType) {
+      const select = document.getElementById('leave-type-select');
+      if (select) {
+        if (defaultType.includes('Casual')) select.value = 'Casual Leave';
+        if (defaultType.includes('Sick')) select.value = 'Sick Leave';
+      }
+    }
+    modal.classList.remove('hidden');
+  }
+
+  function closeLeaveModal() {
+    document.getElementById('leave-modal').classList.add('hidden');
+  }
+
+  function submitLeaveApplication(e) {
+    e.preventDefault();
+    const type = document.getElementById('leave-type-select').value;
+    const start = document.getElementById('leave-start-date').value;
+    const end = document.getElementById('leave-end-date').value;
+
+    if (type.includes('Casual') && currentCL >= 1) {
+      currentCL = Math.max(0, currentCL - 1);
+      document.getElementById('balance-cl').textContent = currentCL.toFixed(1);
+      document.getElementById('meter-cl').style.width = `${(currentCL / 14) * 100}%`;
+    } else if (type.includes('Sick') && currentSL >= 1) {
+      currentSL = Math.max(0, currentSL - 1);
+      document.getElementById('balance-sl').textContent = currentSL.toFixed(1);
+      document.getElementById('meter-sl').style.width = `${(currentSL / 8) * 100}%`;
+    }
+
+    closeLeaveModal();
+    showToast(`Leave application (${type} from ${start} to ${end}) submitted for Manager approval!`);
+  }
+
+  // 4. DAILY WELLNESS TRACKER
+  function selectMood(selectedBtn, moodName) {
+    const parent = document.getElementById('wellness-chips');
+    const buttons = parent.querySelectorAll('button');
+    buttons.forEach(btn => {
+      btn.className = "flex flex-col items-center p-2 rounded-lg bg-surface-container-low hover:bg-surface-container transition-all text-center cursor-pointer";
+      const spanText = btn.querySelectorAll('span')[1];
+      if (spanText) spanText.className = "font-label-xs text-[10px] text-on-surface-variant mt-1";
+    });
+
+    selectedBtn.className = "flex flex-col items-center p-2 rounded-lg bg-secondary text-on-secondary shadow-[0_0_12px_rgba(113,42,226,0.3)] transition-all text-center font-bold ring-2 ring-secondary/40";
+    const activeSpan = selectedBtn.querySelectorAll('span')[1];
+    if (activeSpan) activeSpan.className = "font-label-xs text-[10px] text-on-secondary mt-1";
+
+    const msgBox = document.getElementById('wellness-response-msg');
+    const messages = {
+      'Tough': "Logged: We're here for you. Reach out to HR or take a mental breather.",
+      'Tired': "Logged: Take short breaks, grab coffee, and recharge.",
+      'Okay': "Logged: Steady day ahead! Let us know if you need any support.",
+      'Good': "Logged: Great vibes today! Keep up the awesome momentum.",
+      'Great': "Logged: Great! Have a productive sprint."
+    };
+    if (msgBox) {
+      msgBox.textContent = messages[moodName] || `Logged: ${moodName}!`;
+    }
+  }
+
+  // 5. ANONYMOUS PULSE FEEDBACK (5-STAR & SUBMISSION)
+  let currentRating = 4;
+
+  function renderStars(rating) {
+    const stars = document.querySelectorAll('#star-rating-container span');
+    stars.forEach(star => {
+      const starVal = parseInt(star.getAttribute('data-star'));
+      if (starVal <= rating) {
+        star.classList.remove('text-outline-variant');
+        star.classList.add('text-amber-500');
+        star.style.fontVariationSettings = "'FILL' 1";
+      } else {
+        star.classList.remove('text-amber-500');
+        star.classList.add('text-outline-variant');
+        star.style.fontVariationSettings = "'FILL' 0";
+      }
+    });
+  }
+
+  function previewStars(rating) {
+    renderStars(rating);
+  }
+
+  function resetStarHighlight() {
+    renderStars(currentRating);
+  }
+
+  function setSentimentRating(rating) {
+    currentRating = rating;
+    renderStars(rating);
+    showToast(`Sentiment rating selected: ${rating} out of 5 stars`);
+  }
+
+  function handleFeedbackSubmit(e) {
+    e.preventDefault();
+    const textEl = document.getElementById('feedback-text');
+    const btn = document.getElementById('feedback-submit-btn');
+    if (!textEl.value.trim()) return;
+
+    btn.disabled = true;
+    btn.innerHTML = `<span class="material-symbols-outlined animate-spin text-[16px]">progress_activity</span> Submitting...`;
+
+    setTimeout(() => {
+      textEl.value = '';
+      btn.disabled = false;
+      btn.innerHTML = `<span>Submit Feedback</span>`;
+      showToast('Your confidential feedback has been sent to People Ops!');
+    }, 800);
+  }
+
+  // 6. REPORTS & STANDUPS MODALS
+  function openReportModal(type) {
+    const modal = document.getElementById('report-modal');
+    const title = document.getElementById('report-modal-title');
+    const loadingState = document.getElementById('report-loading-state');
+    const outputState = document.getElementById('report-output-state');
+    const textEl = document.getElementById('report-generated-text');
+
+    title.textContent = type === 'Weekly Summary' ? 'AI Weekly Summary Generator' : 'AI Daily Standup Composer';
+    loadingState.classList.remove('hidden');
+    outputState.classList.add('hidden');
+    modal.classList.remove('hidden');
+
+    setTimeout(() => {
+      loadingState.classList.add('hidden');
+      outputState.classList.remove('hidden');
+      if (type === 'Weekly Summary') {
+        textEl.textContent = "Week 43 Highlights: Auth2 token caching implemented across 4 microservices. Reviewed PR #419 with zero regressions. Addressed 6 Jira backlog bugs and collaborated with Dallas engineering on latency drops.";
+      } else {
+        textEl.textContent = "Yesterday: Finalized GraphQL Schema for Employee Profiles. Today: Reviewing OAuth2 PR #419 and attending Sprint Demo prep at 2:00 PM. Blockers: None.";
+      }
+    }, 900);
+  }
+
+  function closeReportModal() {
+    document.getElementById('report-modal').classList.add('hidden');
+  }
+
+  function confirmReportPublish() {
+    closeReportModal();
+    showToast('Report published successfully and shared with the engineering channel!');
+  }
+
+  // 7. ASK MHK COPILOT CHAT
+  function focusCopilotInput() {
+    const input = document.getElementById('copilot-input');
+    if (input) {
+      input.focus();
+      input.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  }
+
+  function useCopilotSuggestion(text) {
+    const input = document.getElementById('copilot-input');
+    if (input) {
+      input.value = text;
+      input.focus();
+    }
+  }
+
+  function sendCopilotQuery() {
+    const input = document.getElementById('copilot-input');
+    const query = input.value.trim();
+    if (!query) return;
+
+    const stream = document.getElementById('copilot-chat-stream');
+    stream.classList.remove('hidden');
+
+    // Append User Bubble
+    const userBubble = document.createElement('div');
+    userBubble.className = "p-2 rounded-lg bg-surface-container-high text-on-surface text-body-sm font-medium self-end max-w-[85%]";
+    userBubble.textContent = query;
+    stream.appendChild(userBubble);
+    input.value = '';
+    stream.scrollTop = stream.scrollHeight;
+
+    // Simulated Copilot Response
+    setTimeout(() => {
+      const aiBubble = document.createElement('div');
+      aiBubble.className = "p-2.5 rounded-lg bg-secondary-fixed/50 text-on-surface text-body-sm border border-secondary-fixed self-start max-w-[95%] flex flex-col gap-1";
+      
+      let answer = "I have queried the MHK Enterprise Cloud HR database for you.";
+      if (query.toLowerCase().includes('cl') || query.toLowerCase().includes('balance') || query.toLowerCase().includes('leave')) {
+        answer = `You currently have **${currentCL} days** of Casual Leave remaining, and **${currentSL} days** of Sick Leave. Next holiday: Diwali Festival on Nov 1st.`;
+      } else if (query.toLowerCase().includes('report') || query.toLowerCase().includes('standup')) {
+        answer = "Drafted: 'Investigated GraphQL schema improvements for Profile v2, reviewed PR #419, and verified Dallas timezone alignment.'";
+      } else {
+        answer = `Here is what I found for "${query}": Your schedule is synced, all policies are up to date in the MHK Handbook (v3.2).`;
+      }
+
+      aiBubble.innerHTML = `<div class="flex items-center gap-1.5 text-secondary font-bold text-label-xs"><span class="material-symbols-outlined text-[14px]">spark</span> MHK Copilot</div><div>${answer}</div>`;
+      stream.appendChild(aiBubble);
+      stream.scrollTop = stream.scrollHeight;
+    }, 600);
+  }
+
+  // 8. HEADER NOTIFICATIONS & WORKSPACE DROPDOWN
+  function toggleNotifications() {
+    const panel = document.getElementById('notif-panel');
+    panel.classList.toggle('hidden');
+  }
+
+  function markAllNotificationsRead() {
+    const badge = document.getElementById('notif-badge');
+    if (badge) badge.classList.add('hidden');
+    document.getElementById('notif-panel').classList.add('hidden');
+    showToast('All notifications marked as read.');
+  }
+
+  function toggleWorkspaceDropdown() {
+    const menu = document.getElementById('workspace-dropdown-menu');
+    const chevron = document.getElementById('workspace-chevron');
+    menu.classList.toggle('hidden');
+    chevron.classList.toggle('rotate-180');
+  }
+
+  function selectWorkspace(name, color) {
+    document.getElementById('workspace-selected-label').textContent = name;
+    document.getElementById('workspace-indicator').style.backgroundColor = color;
+    toggleWorkspaceDropdown();
+    showToast(`Switched workspace to: ${name}`);
+  }
+
+  function dismissUrgentAlert() {
+    const alert = document.getElementById('urgent-alert');
+    if (alert) alert.style.display = 'none';
+    showToast('Alert dismissed. Complete emergency contact before Oct 31.');
+  }
+
+  // GLOBAL TOAST HELPER
+  function showToast(message) {
+    const container = document.getElementById('toast-container');
+    const toast = document.createElement('div');
+    toast.className = "pointer-events-auto flex items-center gap-2.5 px-4 py-2.5 rounded-xl bg-surface-container-lowest text-on-surface border border-outline-variant/30 shadow-xl font-label-sm text-label-sm animate-in slide-in-from-bottom-3 duration-200";
+    toast.innerHTML = `<span class="material-symbols-outlined text-secondary text-[18px]">info</span><span>${message}</span>`;
+    container.appendChild(toast);
+    setTimeout(() => {
+      toast.classList.add('opacity-0', 'transition-opacity');
+      setTimeout(() => toast.remove(), 300);
+    }, 3200);
+  }
+
+  // Live Clock Synchronization with Actual Clock
+  function updateGlobalClocks() {
+    const now = new Date();
+    const istTime = now.toLocaleTimeString('en-US', { timeZone: 'Asia/Kolkata', hour: '2-digit', minute: '2-digit' });
+    const cstTime = now.toLocaleTimeString('en-US', { timeZone: 'America/Chicago', hour: '2-digit', minute: '2-digit' });
+    
+    const hIst = document.getElementById('header-ist-time');
+    const hCst = document.getElementById('header-cst-time');
+    const cIst = document.getElementById('card-ist-time');
+    const cCst = document.getElementById('card-cst-time');
+
+    if (hIst) hIst.textContent = istTime;
+    if (hCst) hCst.textContent = cstTime;
+    if (cIst) cIst.textContent = istTime;
+    if (cCst) cCst.textContent = cstTime;
+  }
+
+  // Close menus on outside click
+  window.addEventListener('click', (e) => {
+    const notifBtn = document.getElementById('notif-btn');
+    const notifPanel = document.getElementById('notif-panel');
+    if (notifPanel && !notifPanel.classList.contains('hidden')) {
+      if (!notifPanel.contains(e.target) && !notifBtn.contains(e.target)) {
+        notifPanel.classList.add('hidden');
+      }
+    }
+
+    const wsBtn = document.getElementById('workspace-dropdown-btn');
+    const wsMenu = document.getElementById('workspace-dropdown-menu');
+    if (wsMenu && !wsMenu.classList.contains('hidden')) {
+      if (!wsMenu.contains(e.target) && !wsBtn.contains(e.target)) {
+        wsMenu.classList.add('hidden');
+        document.getElementById('workspace-chevron').classList.remove('rotate-180');
+      }
+    }
+  });
+
+  // Initialize
+  startLiveTimer();
+  updateGlobalClocks();
+  setInterval(updateGlobalClocks, 30000);
+  renderStars(4);
+</script></main></div></body></html>
