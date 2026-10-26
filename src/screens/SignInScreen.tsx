@@ -387,11 +387,11 @@ export const SignInScreen: React.FC<SignInScreenProps> = ({ onSignIn }) => {
       <header className="w-full border-b border-slate-200/90 bg-white/95 backdrop-blur-md px-6 py-3.5 z-30 sticky top-0 shadow-xs">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <div className="flex items-center space-x-3.5">
-            <div className="h-11 px-2.5 py-1 bg-white rounded-xl border border-slate-200/90 shadow-xs flex items-center justify-center">
+            <div className="h-11 px-3 py-1 bg-white rounded-xl border border-slate-200/90 shadow-xs flex items-center justify-center">
               <img
-                alt="MHK Software Private Limited"
-                className="h-8 w-auto max-w-[170px] sm:max-w-[210px] object-contain"
-                src="/assets/aistudio/Screenshot_2026-10-22_at_11.47.26_PM_14fb2241.png"
+                alt="MHK Tech Inc."
+                className="h-8 sm:h-9 w-auto max-w-[180px] sm:max-w-[220px] object-contain"
+                src="/assets/aistudio/image_1c54bfb8.png"
               />
             </div>
             <div className="hidden sm:block border-l border-slate-200 pl-3">
@@ -467,15 +467,15 @@ export const SignInScreen: React.FC<SignInScreenProps> = ({ onSignIn }) => {
           <section className="lg:col-span-6 space-y-6 text-left">
             <div className="space-y-4 max-w-lg">
               {/* Highlight Logo Card */}
-              <div className="inline-flex items-center gap-3 p-2.5 sm:p-3 bg-white rounded-2xl border border-slate-200/90 shadow-md shadow-slate-200/60">
+              <div className="inline-flex items-center gap-3 p-3 sm:p-3.5 bg-white rounded-2xl border border-slate-200/90 shadow-md shadow-slate-200/60">
                 <img
-                  src="/assets/aistudio/Screenshot_2026-10-22_at_11.47.26_PM_14fb2241.png"
-                  alt="MHK Software Private Limited"
-                  className="h-9 sm:h-11 w-auto object-contain"
+                  src="/assets/aistudio/image_1c54bfb8.png"
+                  alt="MHK Tech Inc."
+                  className="h-11 sm:h-12 w-auto object-contain"
                 />
                 <div className="border-l border-slate-200 pl-3 pr-1 text-left">
-                  <div className="text-[11px] sm:text-xs font-bold text-slate-900 leading-tight">
-                    MHK Software Private Limited
+                  <div className="text-[12px] sm:text-xs font-bold text-slate-900 leading-tight">
+                    MHK Tech Inc.
                   </div>
                   <div className="text-[10px] text-purple-700 font-semibold mt-0.5">
                     Unified Global HRMS Portal
@@ -884,14 +884,14 @@ export const SignInScreen: React.FC<SignInScreenProps> = ({ onSignIn }) => {
       {/* Compliance Footer in Clean Executive White Theme */}
       <footer className="w-full border-t border-slate-200 bg-white/95 py-4 px-6 text-slate-500 text-xs">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-3 text-center md:text-left">
-          <div className="flex items-center gap-2 justify-center md:justify-start">
+          <div className="flex items-center gap-2.5 justify-center md:justify-start">
             <img
-              src="/assets/aistudio/Screenshot_2026-10-22_at_11.47.26_PM_14fb2241.png"
-              alt="MHK Logo"
-              className="h-5 w-auto object-contain"
+              src="/assets/aistudio/image_1c54bfb8.png"
+              alt="MHK Tech Inc."
+              className="h-6 w-auto object-contain"
             />
             <span>
-              © 2026 <strong>MHK Software Private Limited</strong> &amp; <strong>MHK Tech Inc.</strong> All rights reserved.
+              © 2026 <strong>MHK Tech Inc.</strong> All rights reserved.
             </span>
           </div>
           <div className="flex items-center space-x-3 text-[11px] text-slate-500 flex-wrap justify-center">

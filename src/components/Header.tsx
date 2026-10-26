@@ -104,11 +104,11 @@ export const Header: React.FC<HeaderProps> = ({
           onClick={() => onNavigate('sign-in')}
           title="Return to Sign-In Portal"
         >
-          <div className="h-9 px-2 py-0.5 bg-white rounded-lg border border-slate-200/90 shadow-xs flex items-center justify-center hover:border-purple-300 transition-colors">
+          <div className="h-9 px-2.5 py-0.5 bg-white rounded-lg border border-slate-200/90 shadow-xs flex items-center justify-center hover:border-purple-300 transition-colors">
             <img
-              src="/assets/aistudio/Screenshot_2026-10-22_at_11.47.26_PM_14fb2241.png"
-              alt="MHK Software Private Limited"
-              className="h-7 w-auto max-w-[140px] sm:max-w-[170px] object-contain"
+              src="/assets/aistudio/image_1c54bfb8.png"
+              alt="MHK Tech Inc."
+              className="h-7 w-auto max-w-[150px] sm:max-w-[180px] object-contain"
             />
           </div>
           <div className="hidden lg:flex flex-col">

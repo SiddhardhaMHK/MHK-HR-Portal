@@ -37,9 +37,9 @@ export const PrototypeNavHeader: React.FC<PrototypeNavHeaderProps> = ({ currentS
       <div className="flex items-center justify-between gap-2 px-3 py-1.5 bg-slate-950/92 border border-slate-700/80 rounded-2xl shadow-2xl backdrop-blur-xl text-xs">
         <div className="hidden sm:flex items-center gap-2 pl-1 pr-2.5 border-r border-slate-800 text-slate-300 text-[11px] font-bold">
           <img
-            src="/assets/aistudio/Screenshot_2026-10-22_at_11.47.26_PM_14fb2241.png"
-            alt="MHK Logo"
-            className="h-5 w-auto object-contain rounded bg-white px-1 py-0.5"
+            src="/assets/aistudio/image_1c54bfb8.png"
+            alt="MHK Tech Inc Logo"
+            className="h-6 w-auto object-contain rounded bg-white px-1.5 py-0.5"
           />
           <span className="text-[10px] text-slate-400 uppercase tracking-wider">Flow</span>
         </div>
