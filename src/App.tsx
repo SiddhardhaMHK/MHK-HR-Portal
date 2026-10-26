@@ -6,7 +6,6 @@
 import React, { useState, useRef } from 'react';
 import { ScreenId, DemoRoleKey } from './types';
 import { ToastProvider, useToast } from './components/Toast';
-import { PrototypeNavHeader } from './components/PrototypeNavHeader';
 import { Header } from './components/Header';
 import { CommandPalette } from './components/CommandPalette';
 import { SignInScreen } from './screens/SignInScreen';
@@ -73,15 +72,6 @@ function AppContent() {
 
   return (
     <div className="relative min-h-screen bg-slate-100/90 text-slate-900">
-      {/* Prototype Quick Navigation Bar - Always available for effortless test-driving */}
-      <PrototypeNavHeader
-        currentScreen={currentScreen}
-        onNavigate={(screen) => {
-          setCurrentScreen(screen);
-          showToast(`Navigated to ${screen.replace('-', ' ').toUpperCase()}`, 'info');
-        }}
-      />
-
       {/* Global Command Palette / Search Modal (⌘K) */}
       <CommandPalette
         isOpen={isCommandPaletteOpen}
